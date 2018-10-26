@@ -15,17 +15,17 @@
 \usepackage{hyperref}
 % Verlinke das Inhaltsverzeichnis
 \hypersetup{linktocpage}
-\usepackage[style=footnote-dw, 
-natbib=true, 
-backref=true, 
-edsuper=true, 
-nopublisher=false, 
-urldate=long, 
-backend=biber]{biblatex}
 \usepackage{csquotes}
+\usepackage[style=authortitle-dw,
+idembib=false,
+idemtracker=false,
+backend=biber
+]{biblatex}
 \usepackage{graphicx}
 \addbibresource{mendeley_v3.bib}
+%----------------------------
 
+%----------------------------
 
 %Dokument beginnt
 \begin{document}
@@ -59,64 +59,57 @@ Bacon ipsum dolor amet shank biltong t-bone ham, ground round pastrami boudin po
 
 \subsection{Stadt}
 
-Haas und Neumair zufolge bezeichnet man eine Stadt als eine größere verdichtete Siedlung, die mit bestimmten Funktionen und Merkmalen charakterisiert wird \cite{HaasDefinitionWirtschaftslexikon}. Die Brockhausdefinition schreibt einer Stadt Merkmale zu wie zum Beispiel die eigene Versorgungs- und Verwaltungsstruktur, die innere Gliederung oder eine höhere Bebauungs- und Verkehrsdichte. Hinzu kommen spezielle Funktionen wie poltische Aufgaben (Haupstädte, Festungsstädte) oder wirtschaftliche Funktionen (Hansestädte, Hafenstädte, Karawanenstädte) \cite{BrockhausStadt}. Die statistischen Kriterien, die eine „Stadt“ vom „Land“ unterscheiden variieren von Land zu Land. Beispielsweise werden Städte in der Bundesrepublik Deutschland mit 
+Haas und Neumair zufolge bezeichnet man eine Stadt als eine größere verdichtete Siedlung, die mit bestimmten Funktionen und Merkmalen charakterisiert wird \footcite{HaasDefinitionWirtschaftslexikon}. Die Brockhausdefinition schreibt einer Stadt Merkmale zu wie zum Beispiel die eigene Versorgungs- und Verwaltungsstruktur, die innere Gliederung oder eine höhere Bebauungs- und Verkehrsdichte. Hinzu kommen spezielle Funktionen wie poltische Aufgaben (Haupstädte, Festungsstädte) oder wirtschaftliche Funktionen (Hansestädte, Hafenstädte, Karawanenstädte) \footcite{BrockhausStadt}. Die statistischen Kriterien, die eine „Stadt“ vom „Land“ unterscheiden variieren von Land zu Land. Beispielsweise werden Städte in der Bundesrepublik Deutschland mit 
 \begin{itemize}
 \item 5.000 bis 20.000 Einwohnern als „Kleinstadt“,
 \item 20.000 bis 50.000 Einwohnern als „Mittelstadt“,
 \item ab 100.000 Einwohnern als „Großstadt“ 
 \end{itemize}
-bezeichnet \cite{Institutinternationaldestatistique1887BulletinStatistique}. Demgegenüber orientiert man sich in China an die Bevölkerungsdichte: 
+bezeichnet \footcite{Institutinternationaldestatistique1887BulletinStatistique}. Demgegenüber orientiert man sich in China an die Bevölkerungsdichte: 
 
 \begin{displayquote}
-In the case of cities with district establishment, the city proper refers to the whole administrative area of the district if its population density is 1 500 people per kilometre or higher [...]. \cite[S.~2]{UnitedNations2005Table2005} 
+In the case of cities with district establishment, the city proper refers to the whole administrative area of the district if its population density is 1 500 people per kilometre or higher [...]. \footcite[S.~2]{UnitedNations2005Table2005} 
 \end{displayquote}
 
-Unabhängig von regional unterschiedlichen Kriterien lässt sich mit steigender Einwohnerzahl und -dichte einer Stadt folgern, dass auch die Anforderung an gewährleisteter Infrastruktur und Lebensmittelversorgung für die städtische Bevölkerung steigt. D.h. die Lebensmittelversorgung einer Großstadt zu gewährleisten ist schwieriger als die einer Kleinstadt. Noch größer ist die Herausforderung in Megastädten. Den Vereinten Nationen zufolge wird eine Megastadt (englisch: „Megacity“) als eine Stadt bezeichnet mit mindestens 10 Millionen Einwohnern. Im Jahr 2016 existierten 31 Megastädte und Prognosen zufolge steige die Anzahl der Megastädte im Jahr 2030 auf 41 \cite{UnitedNations2016The2016}. Tokio zählt mit 38 Millionen Einwohnern als die größte Megastadt weltweit und derzeit befinden sich die meisten Megastädte in Industrie- und Entwicklungsländern (wie in Abbildung \ref{figUrban} erkennbar). 
+Unabhängig von regional unterschiedlichen Kriterien lässt sich mit steigender Einwohnerzahl und -dichte einer Stadt folgern, dass auch die Anforderung an gewährleisteter Lebensmittelversorgung für die städtische Bevölkerung steigt. D.h. die Lebensmittelversorgung einer Großstadt zu gewährleisten ist schwieriger als die einer Kleinstadt. Noch größer ist die Herausforderung in Megastädten. Den Vereinten Nationen zufolge wird eine Megastadt (englisch: „Megacity“) als eine Stadt bezeichnet mit mindestens 10 Millionen Einwohnern. Im Jahr 2016 existierten 31 Megastädte und Prognosen zufolge steige die Anzahl der Megastädte im Jahr 2030 auf 41 \footcite{UnitedNations2016The2016}. Tokio zählt mit 38 Millionen Einwohnern als die größte Megastadt weltweit und derzeit befinden sich die meisten Megastädte in Industrie- und Entwicklungsländern (wie in Abbildung \ref{figUrban} erkennbar). 
 
 \begin{figure}[h]
 \centering
+\hspace*{-4cm}   
 \includegraphics[width=20cm]{image_folder/CityPop_Urban.png}
 \caption{Urbanisierung der Welt}
 \label{figUrban}
 \end{figure}
 
-In der obigen Abbildung erkennt man, dass Nord- und Südamerika sowie Europa deutlich verstädtert sind, wohingegen viele Regionen in Afrika und Asien mehr ländliche Gebiete beinhalten. Wie gut wiederum die Lebensmittelversorgung und Infrastruktur in Megastädten ist, hängt von Megastadt zu Megastadt ab. Die Abbildung \ref{figUrbanRf} zeigt eine gute Übersicht der unterschiedlichen Verhältnisse. In dieser Forschungsarbeit der Stadtbegriff im Bezug zu ihrer fähigen Lebensmittelversorgung und Nachhaltigkeit betrachtet.
+In der obigen Abbildung erkennt man, dass Nord- und Südamerika sowie Europa deutlich verstädtert sind, wohingegen viele Regionen in Afrika und Asien mehr ländliche Gebiete beinhalten. In dieser Forschungsarbeit wird der Stadtbegriff im Bezug zu ihrer fähigen Lebensmittelversorgung und Nachhaltigkeit betrachtet. Daher eignet es sich Städte im Unterschied zu ländlichen Gemeinden zu beschreiben: 
 
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=10cm]{image_folder/urban_reifegrad.png}
-\caption{Reifegrad von Megastädten}
-\label{figUrbanRf}
-\end{figure}
+\begin{displayquote} 
+„The hallmarks of cities are: (a) a large population that (b) aggregates in a central location with (c) buildings and monuments that (d) represent institutions that organize and facilitate productivity.“ \footcite[S.16]{Elmqvist2013}. 
+\end{displayquote}  Zusammenfassend heißt es, dass Städte sich kennzeichnen lassen durch eine große Einwohnerzahl angehäuft an einem zentralen Ort mit Bauten und Monumenten, die Institutionen repräsentieren und produktive Leistungen organisieren und ermöglichen.
 
 \subsubsection{Stadtökosysteme}
-Stadtökosysteme sind Ökosysteme, die von Menschen erzeugt und beeinflusst werden. Wesentliche Merkmale eines Stadtökosystems sind der hohe Anteil an bebauter und versiegelter Fläche und eine hohe Bevölkerungsdichte. Genauer gesagt führt diese hohe Dichte an verschiedenen Landnutzungen dazu, dass natürlichen Ressourcen wie Wasser, Luft, Boden und Biodiversität extrem beansprucht werden. Desweiteren lässt sich über Stadtökosysteme sagen, dass ihr Erhalt von der externen Einfuhr an Lebensmitteln und Ressourcen abhängig ist  \cite[S.61]{Breuste2016Stadtokosysteme}.
+Stadtökosysteme sind Ökosysteme, die von Menschen erzeugt und beeinflusst werden. Wesentliche Merkmale eines Stadtökosystems sind der hohe Anteil an bebauter und versiegelter Fläche und eine hohe Bevölkerungsdichte. Genauer gesagt führt diese hohe Dichte an verschiedenen Landnutzungen dazu, dass natürlichen Ressourcen wie Wasser, Luft, Boden und Biodiversität extrem beansprucht werden. Desweiteren lässt sich über Stadtökosysteme sagen, dass ihr Erhalt von der externen Einfuhr an Lebensmitteln und Ressourcen abhängig ist  \footcite[S.61]{Breuste2016Stadtokosysteme}.
 
 
 \subsection{Nachhaltigkeit}
 
-Der Begriff Nachhaltigkeit ansich ist ein vielschichtiger Begriff. Er findet Verwendung in der Wirtschaft, Ökonomie, Ethik und Ökologie. So kann Nachhaltigkeit als Art und Weise des Wirtschaftens bezeichnet, „bei welcher derzeitige Bedürfnisse befriedigt werden, ohne zukünftigen Generationen die Lebensgrundlagen zu entziehen (Sustainable Development). \cite{DefinitionWirtschaftslexikonb}. Ebenso kann der Begriff als Brücke zwischen ökologischen und ökonomischen Interessen gesehen werden. Seinen Ursprung hat das Prinzip der Nachhaltigkeit in der Forstwirtschaft des 18. Jahrhunderts. Nach einer Übernutzung der Wälder und daraus resultierend knapper werdenden Holzbeständen, wurde mit Nachhaltigkeit ein Bewirtschaftungsprinzip gefordert, bei dem regenerativ gearbeitet werden sollte, das heißt “nicht mehr Holz geschlagen werden als nachwächst.“\cite{NachhaltigeBrockhaus.de}
+Der Begriff Nachhaltigkeit ansich ist ein vielschichtiger Begriff. Er findet Verwendung in der Wirtschaft, Ökonomie, Ethik und Ökologie. Nachhaltigkeit kann als Art und Weise des Wirtschaftens bezeichnet werden, „bei welcher derzeitige Bedürfnisse befriedigt werden, ohne zukünftigen Generationen die Lebensgrundlagen zu entziehen. \footcite{DefinitionWirtschaftslexikonb}. Ebenso kann der Begriff als Brücke zwischen ökologischen und ökonomischen Interessen gesehen werden. Seinen Ursprung hat das Prinzip der Nachhaltigkeit in der Forstwirtschaft des 18. Jahrhunderts. Nach einer Übernutzung der Wälder und daraus resultierend knapper werdenden Holzbeständen, wurde mit Nachhaltigkeit ein Bewirtschaftungsprinzip gefordert, bei dem regenerativ gearbeitet werden sollte, das heißt “nicht mehr Holz geschlagen werden als nachwächst.“\footcite{NachhaltigeBrockhaus.de}
 Ab dem 19. Jahrhundert wurde zu dieser rein ressourcenökonomischen Betrachtungsweise von Nachhaltigkeit eine Umfassendere hinzugefügt, die sämtliche Funktionen des Waldes in Betracht zieht.
 
-
-
-
-
-
-Der Begriff Nachhaltigkeit kann in stark und schwach eingeteilt werden.\cite{Nachhaltigkeit}
+\hfill \break
+Der Begriff Nachhaltigkeit kann in stark und schwach eingeteilt werden.\footcite{Nachhaltigkeit}
 
 
 \begin{itemize}
 \item starke Nachhaltigkeit: Erhaltung der natürlichen Ressourcen steht im Vordergrund.Es beruht auf der Annahme, dass Naturgut nicht durch andere Kapitalformen ersetzt werden kann,
 \item schwache Nachhaltigkeit beruht auf der Annahme das Kapital- oder Naturgut durch andere Kapitalformen erstz werden kann.
 \end{itemize}
-Konfliktpotenzial zwischen den Vertretern jeweiliger Positionen treten vor allem bei der Frage auf, "wie heute verursachte, aber zukünftig auftretende Umweltschäden beziehungsweise Ressourcenknappheiten zu bewerten sind.\cite{NachhaltigeBrockhaus.de}
+Konfliktpotenzial zwischen den Vertretern jeweiliger Positionen treten vor allem bei der Frage auf, "wie heute verursachte, aber zukünftig auftretende Umweltschäden beziehungsweise Ressourcenknappheiten zu bewerten sind.\footcite{NachhaltigeBrockhaus.de}
 
 
 
 \subsubsection{Nachhaltige Entwicklung}
- Dieser Begriff wurde von N. abgeleitet. In der internationaler Politik und bei gesellschaftlichen Bewegungen wird er als Leitbild eingesetzt. Ziel der Nachhaltigen Entwicklung ist eine dauerhalfte und gerechten Bewirtschaftung der Erde. \cite{NachhaltigeBrockhaus.de} In der Agrar- und Ernährungswirtschaft zielt der Begriff auf eine " dauerhafte Nutzung von Ressourcen bei gleichbleibender bzw. wachsender Effektivität". \cite{oppenhauser2010nachhaltigkeit} Im internationalen Sprachraum hat sich der Begriff Sustainable Development als Definition dieses Leitbild gefestigt.
+ Dieser Begriff wurde von N. abgeleitet. In der internationaler Politik und bei gesellschaftlichen Bewegungen wird er als Leitbild eingesetzt. Ziel der Nachhaltigen Entwicklung ist eine dauerhalfte und gerechten Bewirtschaftung der Erde. \footcite{NachhaltigeBrockhaus.de} In der Agrar- und Ernährungswirtschaft zielt der Begriff auf eine " dauerhafte Nutzung von Ressourcen bei gleichbleibender bzw. wachsender Effektivität". \footcite{oppenhauser2010nachhaltigkeit} Im internationalen Sprachraum hat sich der Begriff Sustainable Development als Definition dieses Leitbild gefestigt.
  
  Konkrete Umsetzungsmethoden von Nachhaltiger Entwicklung stellen in Entwicklungsländern hauptsächlich Entwicklungsaspekte in den Vordergrund, in den industrialisierten Ländern geht es um den langfristigen Schutz und Erhalt der natürlichen Lebensgrundlage. 
 
@@ -124,7 +117,7 @@ Konfliktpotenzial zwischen den Vertretern jeweiliger Positionen treten vor allem
 
 Die gerechte verteilung der endlichen ressorcen (global commons)
 
-Das Rio-Abkommen aus dem Jahr 1992 wurde neben der Frage nach der Verantwortung für die Verursachung von Umweltproblemen die “Gerechtigkeitsfrage […] von zahlreichen Kommentatoren so beantwortet, dass im Prinzip jeder Mensch weltweit das gleiche Recht hat, die globalen Gemeinschaftsgüter in nachhaltiger Weise zu nutzen. Dieser Interpretation wird entgegengehalten, dass sie regional unterschiedliche Bedürftigkeiten und kulturelle Besonderheiten ignoriere.” cite{NachhaltigeBrockhaus.de}Ebenso besteht der "Einwand, dass neben den unterschiedlichen Bedürftigkeiten auch das unterschiedliche Leistungsvermögen berücksichtigt werden müsse. Demnach sei das zulässige Nutzungsniveau eines Staates nicht nach der Größe seiner Bevölkerung, sondern nach seinem Beitrag zur globalen Wertschöpfung zu bestimmen." \cite{NachhaltigeBrockhaus.de}
+Das Rio-Abkommen aus dem Jahr 1992 wurde neben der Frage nach der Verantwortung für die Verursachung von Umweltproblemen die “Gerechtigkeitsfrage […] von zahlreichen Kommentatoren so beantwortet, dass im Prinzip jeder Mensch weltweit das gleiche Recht hat, die globalen Gemeinschaftsgüter in nachhaltiger Weise zu nutzen. Dieser Interpretation wird entgegengehalten, dass sie regional unterschiedliche Bedürftigkeiten und kulturelle Besonderheiten ignoriere.” footcite{NachhaltigeBrockhaus.de}Ebenso besteht der "Einwand, dass neben den unterschiedlichen Bedürftigkeiten auch das unterschiedliche Leistungsvermögen berücksichtigt werden müsse. Demnach sei das zulässige Nutzungsniveau eines Staates nicht nach der Größe seiner Bevölkerung, sondern nach seinem Beitrag zur globalen Wertschöpfung zu bestimmen." \footcite{NachhaltigeBrockhaus.de}
 
 \begin{figure}[h]
 \centering
@@ -144,7 +137,7 @@ Länder des Südens stellen bislang die sozialen und ökonomischen Aspekte in de
 \label{fig:4-dimensionen Modell}
 \end{figure}
 
-\subsubsection{Kritik am Begriff der nachhaltigen Entwicklung}(\cite{NachhaltigeBrockhaus.de})
+\subsubsection{Kritik am Begriff der nachhaltigen Entwicklung}(\footcite{NachhaltigeBrockhaus.de})
 Die übermäßige Verwendung des Begriff führt bei vielen Kritikern zu Misstrauen. Folgende Meinungen werden vertreten:
 
 \begin{itemize}
@@ -155,16 +148,16 @@ Die übermäßige Verwendung des Begriff führt bei vielen Kritikern zu Misstrau
 \end{itemize}
 
 \subsubsection{Ökologische Nachhaltigkeit}
-„Die ökologische Nachhaltigkeit bezieht sich allgemein auf das Überleben und den Gesundheitszustand von Ökosystemen.“ \cite{DefinitionWirtschaftslexikonc}  Sie bezeichnet einen weitsichtiger und rücksichtsvoller Umgang mit natürlichen Ressourcen. Sofern die ökologische Nachhaltigkeit vernachlässigt wird, kann dies dazu führen, dass bestimmte Ressourcen unbrauchbar oder unwiderruflich zerstört werden mit dem Ergebnis, dass auf diese Weise jegliche weitere Entwicklungen unmöglich werden. Laut Berding und Bukow in :Die kompakte Stadt der Zukunft Auf dem Weg zu einer inklusiven und nachhaltigen Stadtgesellschaft (s.95) \cite{BerdingWolf-DietrichBukowKarinCudakHrsgDieStadtgesellschaft} gewinnt das Thema Nachhaltigkeit für die Stadtentwicklung an Wichtigkeit. 
+„Die ökologische Nachhaltigkeit bezieht sich allgemein auf das Überleben und den Gesundheitszustand von Ökosystemen.“ \footcite{DefinitionWirtschaftslexikonc}  Sie bezeichnet einen weitsichtiger und rücksichtsvoller Umgang mit natürlichen Ressourcen. Sofern die ökologische Nachhaltigkeit vernachlässigt wird, kann dies dazu führen, dass bestimmte Ressourcen unbrauchbar oder unwiderruflich zerstört werden mit dem Ergebnis, dass auf diese Weise jegliche weitere Entwicklungen unmöglich werden. Laut Berding und Bukow in :Die kompakte Stadt der Zukunft Auf dem Weg zu einer inklusiven und nachhaltigen Stadtgesellschaft (s.95) \footcite{BerdingWolf-DietrichBukowKarinCudakHrsgDieStadtgesellschaft} gewinnt das Thema Nachhaltigkeit für die Stadtentwicklung an Wichtigkeit. 
 
 
 
 \subsubsection{Ökosystem}
-Als Ökosystem bezeichnet man ein Wirkungsgefüge von Arten und ihrem Lebensraum. Es besteht aus Produzenten und Destruenten/Reduzenten. Dazwischen befindet sich eine Reihe an Konsumenten. -> Es entsteht eine Nahrungskette. Dieses Nebeneinander auf kleistem Raum aus Pflanzen und Tieren befindet sich in einem zyklischen Prozess. Je enger diese Nahrungskette ineinander verwoben sind und je Artenreicher das Wirkungsgefüge ist desto komplexer ist das Ökosystem.\cite{NachhaltigeBrockhaus.de} Die Agrarlandschaft kann als ein vom Menschen stark beeinflusstes und künstliches Ökosystem angesehen werden.
+Als Ökosystem bezeichnet man ein Wirkungsgefüge von Arten und ihrem Lebensraum. Es besteht aus Produzenten und Destruenten/Reduzenten. Dazwischen befindet sich eine Reihe an Konsumenten. -> Es entsteht eine Nahrungskette. Dieses Nebeneinander auf kleistem Raum aus Pflanzen und Tieren befindet sich in einem zyklischen Prozess. Je enger diese Nahrungskette ineinander verwoben sind und je Artenreicher das Wirkungsgefüge ist desto komplexer ist das Ökosystem.\footcite{NachhaltigeBrockhaus.de} Die Agrarlandschaft kann als ein vom Menschen stark beeinflusstes und künstliches Ökosystem angesehen werden.
 Ökosysteme sind offene Systeme, die einseitig von der Sonne Energie aufnehmen. Die Stoffkreisläufe inerhalb des Systems sind unter optimalen Umständen ausgeglichen. Es entsteht ein dynamisches Gleichgewicht.
 
 Stabilität und Gefährdung: Komplexe Ökosysteme sind stabiler als einfache Ökosysteme, gleichzeitig, sind diese schwer oder unmöglich regenerierbar, während einfache Ökosysteme sich und ihr Gleichgewicht einfach widerherstellen können. Als Beispiel kann der Vergleich zwischen einfachem Ökosystem Nadelwald und komplexem Regenwald herangezogen werden.
-Der Verlust oder die Veränderung einzelner Komponenten (Überdüngung, Wasserknappheit oder Bewässerung in Brachregionen) kann das eigene Gleichgewicht sowie das Gleichgewicht angrenzender Ökosysteme in Gefahr bringen. \cite{DefinitionWirtschaftslexikone}
+Der Verlust oder die Veränderung einzelner Komponenten (Überdüngung, Wasserknappheit oder Bewässerung in Brachregionen) kann das eigene Gleichgewicht sowie das Gleichgewicht angrenzender Ökosysteme in Gefahr bringen. \footcite{DefinitionWirtschaftslexikone}
 
 \begin{figure}[htp]
 \centering
@@ -174,7 +167,7 @@ Der Verlust oder die Veränderung einzelner Komponenten (Überdüngung, Wasserkn
 \end{figure}
         
 \subsubsection{Ökoeffizienz}
- Der World Business Council of Sustainable Development (WBCSD) hat " für Ökoeffizienz die folgenden Kriterien erstellt: die Bereitstellung wettbewerbsfähiger Produkte, die menschliche Bedürfnisse befriedigen, die Lebensqualität fördern und dabei die Umweltauswirkungen und Ressourcenintensität während des gesamten Produktlebens minimieren." \cite{OkoeffizienzBrockhaus.de}
+ Der World Business Council of Sustainable Development (WBCSD) hat " für Ökoeffizienz die folgenden Kriterien erstellt: die Bereitstellung wettbewerbsfähiger Produkte, die menschliche Bedürfnisse befriedigen, die Lebensqualität fördern und dabei die Umweltauswirkungen und Ressourcenintensität während des gesamten Produktlebens minimieren." \footcite{OkoeffizienzBrockhaus.de}
 
 Als Ökoeffizient werden Strategien und Konzepte bezeichnet, die sich dazu eignen nachhaltige Produktionsmethoden umzusetzen. Die Kriterien sind laut des World Business Council of Sustainable Development (WBCSD)– ein Zusammenschluss international tätiger Unternehmen, der das Ziel hat, Wirtschaftswachstum und Nachhaltigkeit in Einklang zu bringen Folgende:
 \begin{itemize}
@@ -188,7 +181,7 @@ Als Ökoeffizient werden Strategien und Konzepte bezeichnet, die sich dazu eigne
 \includegraphics[width=5cm]{image_folder/oekoeffizienz.png}
 \caption{Ökoeffizienzgleichung}
 \label{fig:Ökoeffizienzgleichung}
-\end{figure}\cite{Essel2010AnalyseFazit}
+\end{figure}\footcite{Essel2010AnalyseFazit}
 
 
 Ökoeffizienz kann u.a. erreicht werden durch:
@@ -205,7 +198,7 @@ Methodische Ansätze zur Messung der Ökoeffizienz von Produkten sind:
 \item die Umweltbilanz
 \item Ökoeffizienz-Analyse Bewertungsmethode der BASF." Sie entstand 1995 und bewertet die Wirtschaftlichkeit eines Produkts im Verhältnis zu der Umweltbelastung, die sie ausübt. Betrachtet wird der gesamte Lebensweg des Produkts beginnend bei der Rohstoffgewinnung über die Herstellung und Verwendung bis zur Entsorgung.
 \end{itemize}
-\cite{DefinitionWirtschaftslexikonc} (Quelle des gesamten Abschnitts)
+\footcite{DefinitionWirtschaftslexikonc} (Quelle des gesamten Abschnitts)
 
 \subsubsection{Bewertung von Nachhaltigkeit}
 Werkzeuge zur Bewertung von Nachhaltigkeit: (nach welchen kriterien kann nachhaltigkeit beurteilt werden? (schon bei def?)
@@ -218,10 +211,10 @@ Werkzeuge zur Bewertung von Nachhaltigkeit: (nach welchen kriterien kann nachhal
 \end{itemize}
 
 \subsubsection{ökologischer Fußabdruck}
-"Die (Natur-)Fläche, die zur Aufrechterhaltung der Energie- und Materialflüsse einer Wirtschaftsein-heit wie z. B. einer Stadt benötigt wird, ist deren ökologischer Fußabdruck. Er ist ein Werkzeug zur Bilanzierung des menschlichen Naturverbrauchs und wird in globalen Hektaren angegeben (vgl. Wackernagel & Rees 1997, 23–25). „Der ökologische Fußabdruck misst so die‚ ökologische Tragfähigkeit’ einer Bevölkerung“ (Wackernagel & Rees 1997: 25)."(Zitaat ausGrundlagen einer nachhaltigen Entwicklung S.5)
+"Die (Natur-)Fläche, die zur Aufrechterhaltung der Energie- und Materialflüsse einer Wirtschaftsein-heit wie z. B. einer Stadt benötigt wird, ist deren ökologischer Fußabdruck. Er ist ein Werkzeug zur Bilanzierung des menschlichen Naturverbrauchs und wird in globalen Hektaren angegeben (vgl. Wackernagel & Rees 1997, 23–25). „Der ökologische Fußabdruck misst so die‚ ökologische Tragfähigkeit’ einer Bevölkerung“ (Wackernagel und Rees 1997: 25)."(Zitat aus Grundlagen einer nachhaltigen Entwicklung S.5)
 
 \subsubsection{Nachhaltigkeitswissenschaften}
-Allgemein lässt sich festhalten, dass die "Nachhaltigkeitsforschung [...] sich mit Problemen, die die langfristige Sicherung der gesellschaftlichen Entwick-lungsbedingungen gefährden" befasst. MichelsenGrundlagenEntwicklung \cite{Grundlagen einer nachhaltigen Entwicklung} S.126)
+Allgemein lässt sich festhalten, dass die "Nachhaltigkeitsforschung [...] sich mit Problemen, die die langfristige Sicherung der gesellschaftlichen Entwick-lungsbedingungen gefährden" befasst. MichelsenGrundlagenEntwicklung \footcite{Grundlagen einer nachhaltigen Entwicklung} S.126)
 Ihre Anfänge hat die Nachhaltigkeitswissenschaft im Rahmen der Forschung zum Globalen Wandel in den späten 1980er Jahren. Die Autoren des Reports Grundlagen einer nachhaltigen Entwicklung vermuten, dass das aufkommende Problembewusstsein, nicht zuletzt beeinflusst von der Publikation „Die Grenzen des Wachstums“ (Meadows et al. 1972), eine verstärkte Forschung zu Fragen globaler Umweltprobleme hervorrief.
 Drei internationale Großforschungsprogramme werden dabei insbesondere genannt: (1) das „International Geosphere-Biosphere Programme (IGBP)“, (2) das „World Climate Research Programme“ und (3) das
 „International Research Programme on Biodiversity (DIVERSITAS)“.
@@ -235,8 +228,20 @@ Drei internationale Großforschungsprogramme werden dabei insbesondere genannt: 
 \end{figure}
 
 \section{Geschichte der Urbanisierung}
-Wie Städte entstanden und sich bis heute ausbreiten hat viel damit zu tun wie sich die menschliche Versorgung von Nahrungsmitteln stetig weiterentwickelt hat. Elmquist, Redman, Barthel und Costanza beschreiben hierzu drei vergangene Lösungsansätze \cite{Elmqvist2013}. Der erste Ansatz war das Nomadentum. Menschen zogen von Gegend zu Gegend, um sich zu ernähren. Sie folgten Tierherden sowie klimatisch günstigeren Regionen, wo nahrhafte Rohstoffe zu finden waren. Der zweite Ansatz war die Domestizierung von Tieren und Pflanzen. Diese Form der Nahrungsmittelerzeugung erlaubte dauerhafte Sesshaftigkeit. Dadurch wurden kleine ländliche Gemeinden zur verbreitetesten Siedlungsform auf der Erde. Diese Gemeinden waren unabhängig und isoliert voneinander und zeichneten sich als besonders widerstandsfähig gegenüber klimatisch wechselnden Bedingungen aus. Die Folge dieses stabilen Lebensunterhaltes führte zu einer wachsenden Bevölkerung. Daraus entwickelte sich der dritte Lösungsansatz: Die „urbane Revolution“ %\cite{}. 
-Dorfgemeinden wuchsen so sehr, dass die Menge an Menschen überschüssig zur nötigen Arbeit auf dem Acker war. Den Höhepunkt dieses Prozesses bildete 5500 v.C. die erste städtische Siedlung in Mesopotamien. Die daraus resultierenden Innovationen wie das Schreiben, Monumentalbauten oder spezialisiertes Handwerk zeigten klare Unterschiede zu vorherigen Siedlungsform. Desweiteren ergab sich daraus eine soziale Erneuerung, die charakteristisch für Städte war: Eine klassenstrukturierte Gesellschaft, eine formalisierte Rechtsgrundlage und eine territoriumsbasierte Regierung bildeten den funktionierenden Rahmen. Durch den stetigen Anstieg an Menschen war eine funktionierende Gesellschaftsform notwendig. Anders als die ländlichen Gemeinden zeichnete sich eine Stadt durch die äußerst divers und voneinander abhängig ist. 
+
+Wie Städte entstanden sind und sich bis heute ausbreiten hat viel damit zu tun wie Menschen das Problem der Nahrungsmittelsicherung lösten. Elmquist, Redman, Barthel und Costanza beschreiben in „Urbanization, Biodiversity and Ecosystem Services: Challenges and Opportunities“ hierzu drei vergangene Lösungsansätze, auf das sich dieses Kapitel überwiegend bezieht  \footcite[S.14ff]{Elmqvist2013}. 
+\\
+\\ 
+Der erste Ansatz war das Nomadentum. Menschen zogen von Gegend zu Gegend, um sich zu ernähren. Sie folgten Tierherden sowie klimatisch günstigeren Regionen, wo nahrhafte Rohstoffe zu finden waren. Der zweite Ansatz war die Domestizierung von Tieren und Pflanzen. D.h. Rohstoffe wurden passend nach Bedarf herangezüchtet, geerntet und wieder angebaut. Menschen waren dadurch weniger von wechselnden Bedingungen ausgesetzt und verbesserten stetig ihre Nahrungsmittelerzeugung. Das erlaubte dauerhafte Sesshaftigkeit und förderte eine sichere Existenzgrundlage. Aus diesem Grund setzten sich kleine ländliche Gemeinden zur verbreitetesten Siedlungsform auf der Erde durch. Sie waren zwar unabhängig und isoliert voneinander, zeichneten sich allerdings als besonders widerstandsfähig gegenüber dem vorherigen Lebensstil aus. Für Elmquist et. al. war es also keine Überraschung, dass die Bevölkerungszahl dadurch anstieg. Darüber hinaus wuchsen ländliche Gemeinden derart, dass die Menge an Menschen überschüssig zur nötigen Arbeit auf dem Acker war. \\
+\\
+Den Höhepunkt dieses Prozesses bildete 5500 v.C. die erste städtische Siedlung in Mesopotamien - der dritte Ansatz. Die dortigen Innovationen wie das Schreiben, Monumentalbauten oder vertiefende Handwerkskünste zeigten das Potenzial dieser neuen Siedlungsform. Die Autoren bezeichnen Städte als Zentren der Innovation. Verglichen mit ländlichen Gemeinden zeichnet sich eine Stadt durch eine äußerst diverse und voneinander abhängige Gemeinschaft aus. Ländliche Gemeinden sind zwar unabhängiger und selbstversorgend, dafür war das Wachstum dieser Siedlungsform begrenzt. Anders verhält es sich mit Städten. Bezüglich der Versorgung war eine Stadt auf die umliegenden Gemeinden angewiesen. Jedoch trug der Austausch von Waren, technologische Erfindungen, Wissenschaft und Mathematik enorm zum Wachstum und der Verbreitung von Städten bei. Hinzu kam, dass eine soziale Erneuerung nötig war um diese große Gruppe von Menschen und groß skalierte produktive Aktivitäten zu organisieren. Eine klassenstrukturierte Gesellschaft, eine formalisierte Rechtsgrundlage und eine territoriumsbasierte Regierung bildeten daher den charakteristischen Rahmen. Damit eine Gemeinschaft auf diesen dichten Lebensraum funktionierte, war nämlich eine gewisse Ordnung im Miteinander nötig. Desweiteren waren Bauern in der Lage mehr Nahrungsmittel zu produzieren und zu lagern. Jedoch kam der Anreiz dazu erst durch die neue soziale Entwicklung mit Klassen, die sich mit haltbaren prestige Objekten identifizierten. 
+\\
+\\
+Der wachsende Wohlstand in Städten führte zu regelmäßigen militärischen Angriffen. Zum Schutz wurden daher Stadtmauern gebaut. Diese städtebauliche Eingrenzung führte mit steigendem Wohlstand bei einer wachsenden Bevölkerung zu einem dichteren Stadtökosystem, das kennzeichnend für viele heutige Städte ist. Der nötige Anbau an Rohstoffen fand daher meistens im Umland statt, weswegen viele Dorfgemeinden nahe an Städte ansiedelten. Die Versorgung von Städten war daher abhängig vom Umland. 
+\\
+\\
+Zusammenfassend lässt sich sagen, dass bereits Städte seit ihrer Existenz eine abhängige Beziehung zu ländlichen Gemeinden haben. Denn der Überschuss in der Landwirtschaft sorgte erst dafür, dass diese Siedlungsform entstehen konnte. Städte sind zwar globale bzw. regionale Zentren der Innovation und Administration, waren aber seit Anbeginn angewiesen auf die Einfuhr von Ressourcen. 
+
 
 \section{Vergangenheit der Urbanen Landwirtschaft}
 
@@ -258,9 +263,9 @@ Nutzpflanzen und der Aufzucht von Nutztieren bieten sollen. Neben den frühen Ge
 Interessant sind hier die "landwirtschaftlichen Gürtel" rings um die Städte und das Marktzentrum - den sogenanten "Crystal Palace" im Stadtzentrum.
 Ein Ringförmiger Markt, der einem gläsernen Gewächshaus ähneln soll, das Waren aus der umliegenden Landwirtschaft direkt an den Verbraucher vertreiben kann. Generell bleibt festzuhalten, dass Howard bereits 1898 nicht nur ein Konzept zur Verankerung von Landwirtschaft innerhalb von urbanen Gebieten erdachte sondern auch Ideen entwickelte, wie die urbane Bevölkerung mit den Lebensmitteln versorgt werden kann.
 
-Betrachtet man zum Beispiel Städte wie Boston, USA fällt auf, dass Grünflächen und Grünzüge nach dem Vorbild Howard´s zwar eine wichtige Rolle in der Stadtplanung spielen, diese Grünflächen aber meist als Parks und Freizeitanlagen angelegt wurden. Dies war lange das von der Allgemeinheit als "ländlich" verstandene Bild von Natur innerhalb einer Stadt.
+Betrachtet man zum Beispiel Städte wie Boston, USA fällt auf, dass Grünflächen und Grünzüge nach dem Vorbild Howard's zwar eine wichtige Rolle in der Stadtplanung spielen, diese Grünflächen aber meist als Parks und Freizeitanlagen angelegt wurden. Dies war lange das von der Allgemeinheit als "ländlich" verstandene Bild von Natur innerhalb einer Stadt.
 
-Der urban landwirtschaftliche Aspekt wurde aber in den darauffolgenden Jahren durch nachfolgende Stadtplaner oft übergangen. Für den folgenden Stadtwachstum verkam die Urbane Landwirtschaft zur Ausgestaltung von mühevoll angelegten und vermeintlich natürlichen Ziergärten, die Grünflächen und Erholungsgebiete in die Städte bringen sollten. Aber wie kam es zu dieser gegensätzlichen Entwicklung?
+Der urban landwirtschaftliche Aspekt wurde aber in den darauffolgenden Jahren durch nachfolgende Stadtplaner oft übergangen. Für den folgenden Stadtwachstum verkam die Urbane Landwirtschaft zur Ausgestaltung von mühevoll angelegten und vermeintlich natürlichen Ziergärten, die Grünflächen und Erholungsgebiete in die Städte bringen sollten. So bleibt die Frage wie es zu dieser gegensätzlichen Entwicklung kam.
 
 In Deutschland zeigt die Sozialgeschichte das 1800 Großteile der Bevölkerung auf dem Land leben und aus der sogenannten unterbäuerlichen Schicht bestehen. Zu diesem Zeitpunkt gab es in Deutschland lediglich drei Großstädte. 1835 Endstand dann allmählich das Eisenbahnnetz welches maßgeblich zur Ausbreitung der Industrialisierung beitrug. Durch das Eisenbahnnetz konnten Arbeiter zu Ihren Arbeitsstätten pendeln, welche sich durch das wachsende Netz stärker ausbreiten konnten. Zudem konnten Güter verstärkt kostengünstig transportiert werden. Dies führte in den folgenden Jahren zum Wachstum der städtischen und ländlichen Gebiete und trug zudem zum Bevölkerungswachstum bei. 1850 bildete sich die industrielle Gesellschaft heraus und Deutschland umfasste bereits 35 Millionen Einwohner, welches damit als eines der größten Länder Europas zu dieser Zeit galt. Das enorme Städtewachstum wiederum ging auf die Binnenwanderungen, den Wachstum der Bevölkerung, Gebietserweiterungen und Eingemeindungen zurück. 1900 besaß Deutschland dann bereits 33 Städte mit mehr als 100 Tsd. Einwohnern. Der Ausbau des Schienennetzes ist dabei nicht der einzige Faktor oder gar der Grund der Industrialierung oder des Bevölkerungswachstums, dennoch trug es massiv zur Ausbreitung der Bevölkerung bei. Heinrich Heine einer der bedeutendsten deutschen Schriftsteller schrieb einmal „Welche Veränderungen müssen jetzt eintreten in unserer Anschauungsweise und in unsern Vorstellungen! Sogar die Elementarbegriffe von Zeit und Raum sind schwankend geworden. Durch die Eisenbahnen wird der Raum getötet, und es bleibt nur noch die Zeit übrig“. Dabei bot die Bahn natürlich nicht nur Vorteile. Sie trug maßgeblich zur Veränderung des Landschaftsbildes bei und brachte Rus und Lärm in die Landschaften und Städte. Durch wachsende Infrastrukturen und der Industrie aber verdichteten sich im laufe der 20. Jahrhunderts die urbanen Gebiete.
 
@@ -283,11 +288,16 @@ Die Urbane Landwirtschaft hat es mittlerweile immer öfter in die öffentlichen 
 \subsubsection{Heutige und zukünftige globale Landnutzung}
 
 
-Das Umdenken der allgemeinen Gesellschaft fandt dennoch erst zunemend nach dem ersten Weltkrieg statt. Zuvor 
+Das Umdenken der allgemeinen Gesellschaft fandt dennoch erst zunehmend nach dem ersten Weltkrieg statt. Zuvor 
 
 
 
 \newpage
 \listoffigures
+
+\begingroup
+\singlespacing
+\setlength\bibitemsep{10pt}% oder was auch immer
 \printbibliography
+\endgroup
 \end{document}
