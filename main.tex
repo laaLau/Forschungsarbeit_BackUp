@@ -11,10 +11,14 @@
 \usepackage[autostyle=true,german=quotes]{csquotes}
 \usepackage[default,osfigures,scale=0.95]{opensans}  %% Option 'sfdefault' only if the base font of the document is to be sans serif
 % Verlinke Zitate
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\usepackage[onehalfspacing]{setspace}
 % Verlinke das Inhaltsverzeichnis
 \hypersetup{linktocpage}
 \usepackage{csquotes}
+\usepackage{acronym}
+
+
 \newcommand*{\Bildquelle}[1]{\par\raggedleft\footnotesize Quelle:~#1}
 
 %\usepackage[style=apa,
@@ -23,11 +27,12 @@
 %mincitenames=1,
 %maxcitenames=2]{biblatex}
 
-\usepackage[style=authortitle-dw,
+\usepackage[style=apa,
 idembib=false,
 idemtracker=false,
 backend=biber
 ]{biblatex}
+\DeclareLanguageMapping{ngerman}{ngerman-apa}
 
 \addbibresource{mendeley_v3.bib}
 % Keine Einrückung
@@ -57,14 +62,39 @@ backend=biber
 
 
 \newpage
+\section{Abkürzungsverzeichnis}
+
+\begin{acronym}[Bash]
+	\acro{ul}[UL]{Urbane Landwirtschaft}
+	\acro{ug}[UG]{Urban Gardening}
+	\acro{vf}[VF]{Vertical Farming}
+\end{acronym}
+
+
+\newpage
 
 \section{Abstract}
 
-\section{Einleitung}
-
-\section{Strategische Vorgehensweise der Forschungsarbeit}
+\section{Methoden}
 
 \section{Motivation}
+Den Vereinten Nationen zufolge steige die Anzahl der Menschen 
+
+%Relevanz des Themas erläutern
+%Ist urbane Landwirtschaft eine ökologisch nachhaltige Lebensmittelversorgung?
+
+%Realität:- Unnatürlichkeit erfolgt durch Anhäufung des Menschen:- Urbanisierung (Zuwachs von Städten)
+%- Bevölkerungswachstum
+%- Notwendigkeit: Ernährung
+%- Sind wir nachhaltig? Handeln wir nachhaltig?
+
+%Demgegenüber als Kontrahent:UL 
+%- In Deutschland (auch unter Urban Gardening bekannt) Trendwort
+%- Erweckt Eindruck von Gesundheit, ökologisch nachhaltig, bringe Menschen näher zusammen
+%- Romantisierter Begriff oder eine tatsächliche Lösung im Anbetracht der vielen Herausforderungen, die vor uns bestehen
+%- Landwirtschaft näher zu den Menschen rücken
+
+%-> Beziehung Mensch Landwirtschaft/Natur?? -> praktische Nähe um im Einklang mit der Welt und zu den Grundbedürfnissen zu gelangen
 
 \section{Grundlagen}
 
@@ -76,13 +106,13 @@ Haas und Neumair zufolge bezeichnet man eine Stadt als eine größere verdichtet
 \item 20.000 bis 50.000 Einwohnern als „Mittelstadt“,
 \item ab 100.000 Einwohnern als „Großstadt“ 
 \end{itemize}
-bezeichnet \footcite{Institutinternationaldestatistique1887BulletinStatistique}. Demgegenüber orientiert man sich in China an die Bevölkerungsdichte: 
+bezeichnet \footcite{Institutinternationaldestatistique1887BulletinStatistique}. Dem gegenüber orientiert man sich in China an die Bevölkerungsdichte: 
 
 \begin{displayquote}
 „In the case of cities with district establishment, the city proper refers to the whole administrative area of the district if its population density is 1 500 people per kilometre or higher [...].“ \footcite[S.~2]{UnitedNations2005Table2005} 
 \end{displayquote}
 
-Unabhängig von regional unterschiedlichen Kriterien lässt sich mit steigender Einwohnerzahl und -dichte einer Stadt folgern, dass auch die Anforderungen an gewährleisteter Lebensmittelversorgung für die städtische Bevölkerung steigen. D.h. die Lebensmittelversorgung einer Großstadt zu gewährleisten ist schwieriger als die einer Kleinstadt. Noch größer ist die Herausforderung in Megastädten. Den Vereinten Nationen zufolge wird eine Megastadt (englisch: „Megacity“) als eine Stadt bezeichnet mit mindestens 10 Millionen Einwohnern. Im Jahr 2016 existierten 31 Megastädte und Prognosen zufolge steige die Anzahl der Megastädte im Jahr 2030 auf 41 \footcite{UnitedNations2016The2016}. Tokio zählt mit 38 Millionen Einwohnern als die größte Megastadt weltweit und derzeit befinden sich die meisten Megastädte in Industrie- und Entwicklungsländern (wie in Abbildung \ref{figUrban} erkennbar). 
+Unabhängig von regional unterschiedlichen Kriterien lässt sich mit steigender Einwohnerzahl und -dichte einer Stadt folgern, dass auch die Anforderungen an gewährleisteter Lebensmittelversorgung für die städtische Bevölkerung steigen. D.h. die Lebensmittelversorgung einer Großstadt zu gewährleisten ist schwieriger als die einer Kleinstadt. Noch größer ist die Herausforderung in Megastädten. Den Vereinten Nationen zufolge wird eine Megastadt (englisch: „Megacity“) als eine Stadt bezeichnet mit mindestens 10 Millionen Einwohnern bezeichnet. Im Jahr 2016 existierten 31 Megastädte und Prognosen zufolge steige die Anzahl der Megastädte im Jahr 2030 auf 41 \footcite{UnitedNations2016The2016}. Tokio zählt mit 38 Millionen Einwohnern als die größte Megastadt weltweit und derzeit befinden sich die meisten Megastädte in Industrie- und Entwicklungsländern (wie in Abbildung \ref{figUrban} erkennbar). 
 
 \begin{figure}[htbp]
 \centering
@@ -112,7 +142,6 @@ Um den Begriff urban oder Urbanität innerhalb der folgenden Forschungsarbeit zu
 \centering
 \includegraphics[width=12cm]{image_folder/SchaubildUrbaneEingrenzungen.png}
 \caption{Skizze zur räumlichen Einordnung}
-\label{fig:ul_typologie}
 \end{figure}
 \footcite[]{Eigene Zeichnung, entstanden aus dem Vorbild von Carlos Tobisch, Oasen im Beton S.26, Abb.7}
 
@@ -132,9 +161,8 @@ Parallel dazu kann festgestellt werden für wen, also auf welchen Ebenen, die Na
 
 \begin{itemize}
 \item Auf der Mikroebene steht die Verteilung der Erzeugnisse an die Familie im Vordergrund.
-\item Auf der Mesoebene werden die Erzeugnisse dann mit Freunden und Bekannten geteilt.
-\item Auf der Makroebene werden die Erzeugnisse dann nicht mehr innerhalb von bestimmten Gruppen geteilt sondern gelangen an Konsumenten, die in keiner 
-Verbindung zum Unternehmen stehen. 
+\item Auf der Mesoebene werden die Erzeugnisse mit einem geschlossenen Kreis an Menschen geteilt wie zum Beispiel Vereinsmitglieder oder Bekannte.
+\item Auf der Makroebene werden die Erzeugnisse nicht mehr innerhalb von bestimmten Gruppen geteilt sondern gelangen an Konsumenten, die in der Regel keinem bestimmten Kreis angehören. 
 \end{itemize}
 
 Im Fokus dieser Arbeit steht UL auf der Meso- bis Makroebene. Auf diesen Ebenen lassen sich Formen der UL auf deren Ökonomie und Nachhaltigkeit untersuchen.
@@ -162,32 +190,28 @@ UG stellt hierbei einen Teil der Urbanen Landwirtschaft dar. Und wird häufig au
 
 Aufgrund der steigenden Anzahl der Weltbevölkerung und der sich verändernden globalen Essgewohnheiten entsteht ein steigender Bedarf an Anbaufläche um diesen Lebensmittelbedarf zu decken. Vor allem in Entwicklungsländern und deren städtischen Regionen werden mehr tierische Produkte (d.h. Fleisch- und Milchprodukte), Zucker, Pflanzenöle und verarbeitete Lebensmittel konsumiert als in früheren Jahren. \\
 \\Getreide habe laut Von Koerber einen Anteil von 50\% des Nahrungsmittelkonsums weltweit. Das lasse sich vor allem darauf zurückführen, dass in Entwicklungsländern dieser Anteil bis zu 80\% ausmache.\footcite[Vgl.][S.4ff]{VonKoerber2008Globale-trends}
-Betrachte man diesbezüglch die Entwicklung aller „Verwendungen (einschließlich Nahrung, Futtermittel und andere Verwendungen, wie Saatgut oder Produktion von Ethanol und Stärke), soll[e] der weltweite Verbrauch von Getreide ansteigen, von 309 kg pro Person im Jahr 2000 auf zu erwartende 339 kg bis 2050.\footcite[S.3ff]{VonKoerber2008Globale-trends}\footcite[vgl.][S.23ff]{FAO2006World2030/2050} 
+Betrachte man diesbezüglich die Entwicklung aller „Verwendungen (einschließlich Nahrung, Futtermittel und andere Verwendungen, wie Saatgut oder Produktion von Ethanol und Stärke), soll[e] der weltweite Verbrauch von Getreide ansteigen, von 309 kg pro Person im Jahr 2000 auf zu erwartende 339 kg bis 2050.\footcite[S.3ff]{VonKoerber2008Globale-trends}\footcite[vgl.][S.23ff]{FAO2006World2030/2050} 
 Laut Keyzer et al. zufolge würden die Prognosen „die Nachfrage nach Getreide als Futtermittel oft stark unterschätzen.
 Demnach könnte die Futtergetreidenachfrage in den kommenden Jahrzehnten höher sein, als bis jetzt prognostiziert.”\footcite[S.3f]{VonKoerber2008Globale-trends}
 
-Andere Quellen relativieren diese Aussage...
+Andere Quellen relativieren diese Aussage und sprechen von einer früheren Sättigung als erwartet.
 
-Ebenso soll der Konsum von Fleisch, Milch, Milchprodukten und Eiern laut Prognosen weiter steigen. \footcite[Vgl.][S.4f]{VonKoerber2008Globale-trends}
-
-Gemäß Prognosen soll sich der Fleischkonsum bis zum Jahr 2050 weltweit verdoppeln und der Milchkonsum um ein viertel ansteigen. Da hierbei große regionale Unterschied bestehen, sind die genauen Werte der Verhältnismäßigkeiten zwischen den einzelnen Kontinenten \label{fig:konsumweltweit} zu entnehmen.\footcite[Vgl.][S.4]{VonKoerber2008Globale-trends}
+Ebenso soll der weltweite Konsum von Fleisch, Milch, Milchprodukten und Eiern laut Prognosen weiter steigen. \footcite[Vgl.][S.4f]{VonKoerber2008Globale-trends} So soll sich der Fleischkonsum bis zum Jahr 2050 weltweit verdoppeln und der Milchkonsum um ein Viertel ansteigen. Hierbei bestehen jedoch große regionale Unterschiede.\footcite[Vgl.][S.4]{VonKoerber2008Globale-trends} Während sich der Verbrauch in den Industrieländern bereits einer Sätttigung annähert, steigt der Konsum in Schwellen und Entwicklungsländern noch lange. Der Grund dafür ist dort der Anstieg der Lebensqualität und ein daraus folgender steigender Konsum von Luxusprodukten.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=16cm]{image_folder/2030S8.png}
 \caption{Weltweiter Anstieg des Lebensmittelkonsums bis 2050}
-\label{fig:konsumbis2050}
-\end{figure}\footcite[vgl.][S.8]{FAO2006World2030/2050} 
+\label{fig:konsumbis2050}\footcite[vgl.][S.8]{FAO2006World2030/2050} 
+\end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=16cm]{image_folder/KonsumWeltweit.png}
 \caption{Weltweiter Konsum von Lebensmitteln}
-\label{fig:konsumweltweit}
-\end{figure}\footcite[S.4f]{VonKoerber2008Globale-trends}
+\label{fig:konsumweltweit}\footcite[S.4f]{VonKoerber2008Globale-trends}
+\end{figure}
 
-\subsubsection{Flächenbedarf von Ernährungsgewohnheiten}
-Informationen: Globale Ernährungsgewohnheiten und -trends: S.6ff
 
 \subsubsection{Flächenbedarf von Ernährungsgewohnheiten}
 
@@ -213,36 +237,36 @@ Wie in \label{fig:AckerproKopf} zu beobachten ist, wird mit dem weiteren Wachstu
 
 \subsection{Nachhaltigkeit***}
 
-Der Begriff Nachhaltigkeit an sich ist ein vielschichtiger Begriff. Er findet Verwendung in der Wirtschaft, Ökonomie, Ethik und Ökologie. Nachhaltigkeit kann als Art und Weise des Wirtschaftens bezeichnet werden, „bei welcher derzeitige Bedürfnisse befriedigt werden, ohne zukünftigen Generationen die Lebensgrundlagen zu entziehen. \footcite{DefinitionWirtschaftslexikonb}. Ebenso kann der Begriff als Brücke zwischen ökologischen und ökonomischen Interessen gesehen werden. Seinen Ursprung hat das Prinzip der Nachhaltigkeit in der Forstwirtschaft des 18. Jahrhunderts. Nach einer Übernutzung der Wälder und daraus resultierend knapper werdenden Holzbeständen, wurde mit Nachhaltigkeit ein Bewirtschaftungsprinzip gefordert, bei dem regenerativ gearbeitet werden sollte, das heißt “nicht mehr Holz geschlagen werden als nachwächst.“ \footcite{NachhaltigeBrockhaus.de}
-Ab dem 19. Jahrhundert wurde dieser rein ressourcenökonomischen Betrachtungsweise von Nachhaltigkeit eine umfassendere hinugefügt, die sämtliche Funktionen des Waldes in Betracht zieht, wie beispiesweise die Aufrechterhaltung seiner Schutzfunktion.
+Der Begriff Nachhaltigkeit an sich ist ein vielschichtiger Begriff. Er findet Verwendung in der Wirtschaft, Ökonomie, Ethik und Ökologie. Nachhaltigkeit kann als Art und Weise des Wirtschaftens bezeichnet werden, „bei welcher derzeitige Bedürfnisse befriedigt werden, ohne zukünftigen Generationen die Lebensgrundlagen zu entziehen. \footcite{DefinitionWirtschaftslexikonb}. Ebenso kann der Begriff als Brücke zwischen ökologischen und ökonomischen Interessen verstanden werden. Seinen Ursprung hat das Prinzip der Nachhaltigkeit in der Forstwirtschaft des 18. Jahrhunderts. Nach einer Übernutzung der Wälder und daraus resultierend knapper werdenden Holzbeständen, wurde mit Nachhaltigkeit ein Bewirtschaftungsprinzip gefordert, bei dem regenerativ gearbeitet werden sollte, das heißt “nicht mehr Holz geschlagen werden als nachwächst.“ \footcite{NachhaltigeBrockhaus.de}
+Ab dem 19. Jahrhundert wurde dieser rein ressourcenökonomischen Betrachtungsweise von Nachhaltigkeit eine umfassendere hinzugefügt, die sämtliche Funktionen des Waldes in Betracht zieht, wie beispielsweise die Aufrechterhaltung seiner Schutzfunktion.\footnote{was versteht man unter nachhaltigkeit!!!!!!!!!!!!!!!!1}
 
 \hfill \break
-Der Begriff Nachhaltigkeit kann in stark und schwach eingeteilt werden.\footcite{Nachhaltigkeit}
+Der Begriff Nachhaltigkeit kann in „stark” und „schwach” eingeteilt werden.\footcite{Nachhaltigkeit}
 
 
 \begin{itemize}
 \item die starke Nachhaltigkeit stellt die Erhaltung der natürlichen Ressourcen in den Vordergrund. Sie beruht auf der Annahme, dass Naturgut nicht durch andere Kapitalformen ersetzt werden kann.
-\item schwache Nachhaltigkeit beruht auf der Annahme das Kapital- oder Naturgut durch andere Kapitalformen erstetzt werden kann.
+\item schwache Nachhaltigkeit beruht auf der Annahme das Kapital- oder Naturgut durch andere Kapitalformen ersetzt werden kann.
 \end{itemize}
 Konfliktpotenzial zwischen den Vertretern jeweiliger Positionen tritt vor allem bei der Frage auf, „wie heute verursachte, aber zukünftig auftretende Umweltschäden beziehungsweise Ressourcenknappheiten zu bewerten sind".\footcite{NachhaltigeBrockhaus.de}
 
 
 
 \subsubsection{Nachhaltige Entwicklung}
-  Ziel der Nachhaltigen Entwicklung ist eine dauerhalfte und gerechten Bewirtschaftung der Erde.\footcite{NachhaltigeBrockhaus.de} Die Bezeichnung wurde vom Begriff der Nachhaltigkeit abgeleitet. In der Agrar- und Ernährungswirtschaft definiert der Begriff eine "dauerhafte Nutzung von Ressourcen bei gleichbleibender bzw. wachsender Effektivität". \footcite{oppenhauser2010nachhaltigkeit} Im internationalen Sprachraum hat sich der Begriff "Sustainable Development" als Definition gefestigt. In der internationalen Politik und bei gesellschaftlichen Bewegungen wird die nachhaltige Entwicklung als Leitbild eingesetzt.\footcite{oppenhauser2010nachhaltigkeit}
+  Ziel der nachhaltigen Entwicklung ist eine dauerhalfte und gerechte Bewirtschaftung der Erde.\footcite{NachhaltigeBrockhaus.de} Die Bezeichnung wurde vom Begriff der Nachhaltigkeit abgeleitet. In der Agrar- und Ernährungswirtschaft definiert der Begriff eine "dauerhafte Nutzung von Ressourcen bei gleichbleibender bzw. wachsender Effektivität". \footcite{oppenhauser2010nachhaltigkeit} Im internationalen Sprachraum hat sich der Begriff „Sustainable Development” als Definition gefestigt. In der internationalen Politik und bei gesellschaftlichen Bewegungen wird die nachhaltige Entwicklung als Leitbild eingesetzt.\footcite{oppenhauser2010nachhaltigkeit}
  
- Konkrete Umsetzungsmethoden von nachhaltiger Entwicklung stellen in Entwicklungsländern hauptsächlich Aspekte hinsichtlich des ökonomischen und sozialen Fortschritts in den Vordergrund. In den industrialisierten Ländern geht dabei mehr um den langfristigen Schutz und Erhalt der natürlichen Lebensgrundlage. 
+ Konkrete Umsetzungsmethoden von nachhaltiger Entwicklung stellen in Entwicklungsländern hauptsächlich Aspekte hinsichtlich des ökonomischen und sozialen Fortschritts in den Vordergrund. In den industrialisierten Ländern geht es dabei mehr um den langfristigen Schutz und Erhalt der natürlichen Lebensgrundlage. 
 
 
 
 \subsubsection{Ökologische Nachhaltigkeit***}
-„Die ökologische Nachhaltigkeit bezieht sich allgemein auf das Überleben und den Gesundheitszustand von Ökosystemen.“ \footcite{DefinitionWirtschaftslexikonc}  Sie bezeichnet einen weitsichtigeren und rücksichtsvolleren Umgang mit natürlichen Ressourcen. Sofern die ökologische Nachhaltigkeit vernachlässigt wird, kann dies dazu führen, dass bestimmte Ressourcen unbrauchbar oder unwiderruflich zerstört werden, was jeglichen weiteren Entwicklung der Ressource und ihrer Umgebung unmöglich machen kann. Laut Berding und Bukow in "Die kompakte Stadt der Zukunft - Auf dem Weg zu einer inklusiven und nachhaltigen Stadtgesellschaft (s.95) \footcite{BerdingWolf-DietrichBukowKarinCudakHrsgDieStadtgesellschaft} gewinnt das Thema Nachhaltigkeit für die Stadtentwicklung an neuer Relevanz. 
+„Die ökologische Nachhaltigkeit bezieht sich allgemein auf das Überleben und den Gesundheitszustand von Ökosystemen.“ \footcite{DefinitionWirtschaftslexikonc}  Sie bezeichnet einen weitsichtigeren und rücksichtsvolleren Umgang mit natürlichen Ressourcen. Sofern die ökologische Nachhaltigkeit vernachlässigt wird, kann dies dazu führen, dass bestimmte Ressourcen unbrauchbar oder unwiderruflich zerstört werden, was jegliche weitere Entwicklung der Ressource und ihrer Umgebung unmöglich machen kann. Laut Berding und Bukow in "Die kompakte Stadt der Zukunft - Auf dem Weg zu einer inklusiven und nachhaltigen Stadtgesellschaft (s.95) \footcite{BerdingWolf-DietrichBukowKarinCudakHrsgDieStadtgesellschaft} gewinnt das Thema Nachhaltigkeit für die Stadtentwicklung an neuer Relevanz. 
 
 
 
 \subsubsection{Ökosystem***}
-Als Ökosystem bezeichnet man ein Wirkungsgefüge von Arten und ihrem Lebensraum. Es besteht aus Produzenten und Destruenten. Dazwischen befindet sich eine Reihe an Konsumenten. Vereinfacht dargestellt entsteht auf diese Weise eine Nahrungskette. Dieses Nebeneinander aus Pflanzen und Tieren befindet sich stets in einem zyklischen Prozess. Je enger die Nahrungsketten ineinander verwoben sind und je artenreicher das Wirkungsgefüge ist desto komplexer ist das Ökosystem.\footcite{NachhaltigeBrockhaus.de} Die Agrarlandschaft kann als ein vom Menschen stark beeinflusstes und künstliches Ökosystem angesehen werden. Vgl.\footcite{BrockhausOkosystem}
-Ökosysteme sind offene Systeme, die einseitig von der Sonne Energie aufnehmen. Die Stoffkreisläufe inerhalb des Systems sind unter optimalen Umständen ausgeglichen. Es entsteht ein dynamisches Gleichgewicht. \footcite{BrockhausOkosystem}
+Als Ökosystem bezeichnet man ein Wirkungsgefüge von Arten und ihrem Lebensraum. Einzelne Vorgänge innerhalb des Systems werden von Produzenten und Destruenten durchgeführt. Vereinfacht dargestellt entsteht auf diese Weise eine Nahrungskette. Dieses Nebeneinander aus verschiedenen Organismen befindet sich stets in einem zyklischen Prozess. Je enger die Nahrungsketten ineinander verwoben sind und je artenreicher das Wirkungsgefüge ist desto komplexer und resilienter ist das Ökosystem.\footcite{NachhaltigeBrockhaus.de} Die Agrarlandschaft kann als ein vom Menschen stark beeinflusstes und künstliches Ökosystem angesehen werden.\footcite[Vgl.]{BrockhausOkosystem}
+Ökosysteme sind offene Systeme, die einseitig von der Sonne Energie aufnehmen. Die Stoffkreisläufe innerhalb des Systems sind unter optimalen Umständen ausgeglichen. So entsteht ein dynamisches Gleichgewicht. \footcite{BrockhausOkosystem}
 
 \hfill \break
 Stabilität und Gefährdung: Komplexe Ökosysteme sind stabiler als einfache Ökosysteme, gleichzeitig sind diese schwerer oder unmöglich regenerierbar, während einfache Ökosysteme sich und ihr Gleichgewicht einfach wiederherstellen können. Als Beispiel kann der Vergleich zwischen einem einfachem Ökosystem (Nadelwald) und einem komplexem Ökosystem (Regenwald) herangezogen werden.
@@ -260,14 +284,14 @@ In einem einfachen System kann der Verlust oder die Veränderung einzelner Kompo
         
 \subsubsection{Öko-Effizienz und Ressourceneffizienz im Vergleich}
 
-Öko-Effizienz und Ressourceneffizienz geben beide eine relative Kennzahl an, die das Verhältnis einer gewünschten Grösse zu ihrer unerwünschten (Schadschöpfung) darstellt. Bei den Begriffen ist allein der Fokus ein anderer.
+Öko-Effizienz und Ressourceneffizienz geben beide eine relative Kennzahl an, die das Verhältnis einer gewünschten Größe zu ihrer unerwünschten (Schadschöpfung) darstellt. Der Fokus ist bei den Begriffen ein anderer. Im Folgenden wird erklärt, inwiefern sich bei den Begriffen die Fokussierung unterscheidet.
 
 \\
 \subsubsection{Öko-Effizienz}
-Die Öko-Effizienz beschreibt das Verhältnis von ökologischer Schadschöpfung einer Tätigkeit oder eines Produkts zu seiner ökonomischer Wertschöpfung. \footcite[Vgl.][]{Schaltegger1990OkologischeUnternehmung} 
+Die Öko-Effizienz beschreibt das Verhältnis von ökologischer Schadschöpfung einer Tätigkeit oder eines Produkts zu seiner ökonomischer Wertschöpfung. \footcite[Vgl.][S.]{Schaltegger1990OkologischeUnternehmung} 
 
 \subsubsection{Ressourceneffizienz}
-Im Vergleich dazu liegt der Fokus bei der Berechnung der  Ressourceneffizienz beim Ressourcenverbrauch. Die Gleichung wäre hier also: Wertschöpfung/Ressourcenverbrauch.
+Im Vergleich dazu liegt der Fokus bei der Berechnung der  Ressourceneffizienz beim Ressourcenverbrauch bzw. die Materialflüsse. Die Gleichung wäre hier also: Wertschöpfung/Ressourcenverbrauch.
 
 \begin{figure}[htbp]
 \centering
@@ -334,8 +358,8 @@ Das Framework for Evaluating Sustainable Land Management FESLM von Smyth \& Duma
 \label{fig:Bewertung von Nachhaltiger Landnutzung}
 \end{figure}\footcite{TobiasSpringDerBasel-Stadt, S.17}
 
-\subsubsection{ökologischer Fußabdruck***}
-„Die (Natur-)Fläche, die zur Aufrechterhaltung der Energie- und Materialflüsse einer Wirtschaftseinheit wie z. B. einer Stadt benötigt wird, ist deren ökologischer Fußabdruck. Er ist ein Werkzeug zur Bilanzierung des menschlichen Naturverbrauchs und wird in globalen Hektaren angegeben."„Der ökologische Fußabdruck misst so die‚ ökologische Tragfähigkeit’ einer Bevölkerung“.\footcite[S. 25]{MathisWackernagelUnserNimmt} \footcite[S.5]{MichelsenGrundlagenEntwicklung} 
+\subsubsection{Ökologischer Fußabdruck***}
+Weltweit ist der „Ökologischer Fußabdruck einer der erfolgreichsten Indikatoren zur Vermittlung der „physischen Begrenztheit des Planeten Erden”.\footcite[S.2]{StefanGiljum2007WissenschaftlicheFuabdruck}„Die (Natur-)Fläche, die zur Aufrechterhaltung der Energie- und Materialflüsse einer Wirtschaftseinheit wie z. B. einer Stadt benötigt wird, ist deren ökologischer Fußabdruck. Er ist ein Werkzeug zur Bilanzierung des menschlichen Naturverbrauchs und wird in globalen Hektaren angegeben."„Der ökologische Fußabdruck misst so die ökologische Tragfähigkeit’ einer Bevölkerung“.\footcite[S. 25]{MathisWackernagelUnserNimmt} \footcite[S.5]{MichelsenGrundlagenEntwicklung} 
 \footcite[Vgl.][S.23ff]{MathisWackernagelUnserNimmt}
 „Die Inanspruchnahme von Ressourcen einer Person, einer Stadt oder eines Landes"\footcite[S.192]{AntjeFlade2015StadtStadtforschung} können somit anhand des ökologischen Fußabdrucks verglichen werden. 
 
@@ -344,6 +368,10 @@ Das Framework for Evaluating Sustainable Land Management FESLM von Smyth \& Duma
 \end{displayquote} 
 
 Durch die Berechnung dieses Fußabdrucks kann also nachvollzogen werden ob ein jeweiliger Konsum nachhaltig ist oder nicht.\footcite[S.192]{AntjeFlade2015StadtStadtforschung}
+
+Kritik am ökolgischen Fußabdruck besteht unter anderem, da der „Fußabdruck die wichtige Dimension nicht-erneuerbarer Ressourcen nur indirekt einbezieht.”\footcite[S.3]{StefanGiljum2007WissenschaftlicheFuabdruck} So gebe der Fußabdruck lediglich vor die Grenze von Nachhaltiger Nutzung vorzuweisen und, dabei würden die Berechnungen auf zum Teil fraglichen Annahmen basieren. \footcite[Vgl.][S.3f]{StefanGiljum2007WissenschaftlicheFuabdruck}
+
+Jedes der zuvor genannten Beispiele besitzt einen Fokus auf einen gewissen Parameter im Ressourcenverbrauch. Jedes Konzept weist dabei auf seine Weise Lücken auf. Schlussendlich sind die Bewertungsstrategien lediglich eine Annäherung oder ein Versuch der Quantifizierung des Ressourcenverbrauchs. und können nicht als feste Berechnung gewertet werden. Dies zeigt die Komplexität des Begriff.<-- Fokussieren
 
 \begin{figure}[htbp]
 \centering
@@ -361,9 +389,9 @@ Durch die Berechnung dieses Fußabdrucks kann also nachvollzogen werden ob ein j
 
 \subsubsection{Konfliktpotenziale bei der Umsetzung und Bewertung von Nachhaltiger Entwicklung}
 
-Bei der Frage wie nachhaltige Entwicklung effizient und lösungsorientiert umgesetzt werden solle, stellen sich neben der Frage nach der Verantwortlichkeit für die Verursachung der Umweltprobleme und die Gerechtigkeitfrage nach der Verteilung der endlichen Ressourcen ("Global commons"). 
+Beim Thema wie nachhaltige Entwicklung effizient und lösungsorientiert umgesetzt werden solle, stellen sich neben der Problematik der Verantwortlichkeit für die Verursachung der Umweltprobleme und die Gerechtigkeitfrage nach der Verteilung der endlichen Ressourcen ("Global commons"). 
 
-Nach dem Rio-Abkommen aus dem Jahr 1992 wurde diese Frage "von zahlreichen Kommentatoren so beantwortet, dass im Prinzip jeder Mensch weltweit das gleiche Recht hat, die globalen Gemeinschaftsgüter in nachhaltiger Weise zu nutzen. Dieser Interpretation wird entgegengehalten, dass sie regional unterschiedliche Bedürftigkeiten und kulturelle Besonderheiten ignoriere.” \footcite{NachhaltigeBrockhaus.de} Ebenso besteht der "Einwand, dass neben den unterschiedlichen Bedürftigkeiten auch das unterschiedliche Leistungsvermögen berücksichtigt werden müsse."\footcite{NachhaltigeBrockhaus.de} Demnach sei das zulässige Nutzungsniveau eines Staates nicht nach der Größe seiner Bevölkerung, sondern nach seinem Beitrag zur globalen Wertschöpfung zu bestimmen."\footcite{NachhaltigeBrockhaus.de}
+Nach dem Rio-Abkommen aus dem Jahr 1992 wurde diese Frage „von zahlreichen Kommentatoren so beantwortet, dass [...] jeder Mensch weltweit das gleiche Recht hat, die globalen Gemeinschaftsgüter in nachhaltiger Weise zu nutzen. Dieser Interpretation wird entgegengehalten, dass sie regional unterschiedliche Bedürftigkeiten und kulturelle Besonderheiten ignoriere.” \footcite{NachhaltigeBrockhaus.de} Ebenso besteht der "Einwand, dass neben den unterschiedlichen Bedürftigkeiten auch das unterschiedliche Leistungsvermögen berücksichtigt werden müsse."\footcite{NachhaltigeBrockhaus.de} Demnach sei das zulässige Nutzungsniveau eines Staates nicht nach der Größe seiner Bevölkerung, sondern nach seinem Beitrag zur globalen Wertschöpfung zu bestimmen."\footcite{NachhaltigeBrockhaus.de}
 
 \begin{figure}[htbp]
 \centering
@@ -372,7 +400,7 @@ Nach dem Rio-Abkommen aus dem Jahr 1992 wurde diese Frage "von zahlreichen Komme
 \label{fig:3-dimensionen Modell}
 \end{figure}
 
-Konfliktpoltenzial besteht ebenfalls bei der Priorisierung von Lösungsvorschlägen. Eine Nachhaltige Lösung im sozialen Sinn kann sich auf Kosten von ökologischer Nachhaltigkeit auswirken und umgekehrt. Genauso kann auch eine Win-Win Situation entstehen.
+Konfliktpotenzial besteht ebenfalls bei der Priorisierung von Lösungsvorschlägen. Eine nachhaltige Lösung im sozialen Sinn kann sich auf Kosten von ökologischer Nachhaltigkeit auswirken und umgekehrt. Genauso kann auch eine Win-Win Situation entstehen.
 
 Länder des Südens stellen bislang die sozialen und ökonomischen Aspekte in den Vordergrund, Länder des Nordens wird dadurch die Hauptlast bei der Lösung der bestehenden Probleme im ökologischen Bereich zugeschrieben. Die Länder des Nordens stellen den ök. Aspekt in den Vordergrund, nicht zuletzt weil sie es sich leisten können. Sie fordern gleichzeitig Lösungsinitativen von Ländern des Südens.
 
@@ -429,7 +457,7 @@ Drei internationale Großforschungsprogramme werden bezüglich der Nachhaltigkei
 
 \FloatBarrier
 
-\section{Die Stadtbevölkerung und Landwirtschaft: Vereinbar oder Isoliert?}
+\section{Die Distanz zwischen Stadtbevölkerung und Landwirtschaft}
 \subsection{Verstädterung im Hinblick auf die Lebensmittelversorgung***}
 Wie Städte entstanden sind und sich bis heute ausbreiten hat viel damit zu tun wie Menschen das Problem der Nahrungsmittelsicherung lösten. Elmquist, Redman, Barthel und Costanza beschreiben in „Urbanization, Biodiversity and Ecosystem Services: Challenges and Opportunities“ hierzu drei vergangene Lösungsansätze, an dem sich dieses Kapitel anlehnt.\footcite[S.14ff]{Elmqvist2013} 
 \\
@@ -478,11 +506,11 @@ Abschließend sind aus den Kapiteln 6.1. und 6.2. folgende Merkmale zu erkennen:
 \section{Aspekt der Romantik und „Landlust“ in Bezug auf Urbaner Landwirtschaft am Beispiel Deutschland}
 
 \subsection{Aufkommen der Landlust“ und deren Formen}
-Eine romantische Vorstellung des Landlebens und der Landwirtschaft bei der Begrünung von Städten ist ein weit verbreitetes Phänomen und dazu nicht neu. Wie zuvor beschrieben trat dieses Phänomen in der Vergangenheit häufiger auf. Da Landwirtschaft bis zur Phase der Industrialisierung auch in der Stadt oder im städtischen Umland stattfand und die Versorgung so durch eigens angebaute Lebensmittel in der Subsitenzwirtschaft bewerkstelligt wurde, bildete diese "ursprüngliche" Form der Landwirtschaft in Deutschland und auch global gesehen die Tradition der Nahrungsmittelversorgung ab. Erst mit der Verdichtung der Städte und der Umwandlung von einer Agrar- zur Industriegesellschafft verschwanden die städtischen Gärten und Landwirtschaftsflächen. Dieser Gesellschaftsumschwung führte dann zur Urbanisierung. \footcite[Vgl.][S. 32ff]{Egnolff2015DieIdeal}\\
+Eine romantische Vorstellung des Landlebens und der Landwirtschaft bei der Begrünung von Städten ist ein weit verbreitetes Phänomen und dazu nicht neu. Wie zuvor beschrieben trat dieses Phänomen in der Vergangenheit häufiger auf. Da Landwirtschaft bis zur Phase der Industrialisierung auch in der Stadt oder im städtischen Umland stattfand und die Versorgung so durch eigens angebaute Lebensmittel in der Subsitenzwirtschaft bewerkstelligt wurde, bildete diese „ursprüngliche“ Form der Landwirtschaft in Deutschland und auch global gesehen die Tradition der Nahrungsmittelversorgung ab. Erst mit der Verdichtung der Städte und der Umwandlung von einer Agrar- zur Industriegesellschafft verschwanden die städtischen Gärten und Landwirtschaftsflächen. Dieser Gesellschaftsumschwung führte dann zur Urbanisierung. \footcite[Vgl.][S. 32ff]{Egnolff2015DieIdeal}\\
 \\
-Enge Wohnverhältnisse, schlechte Hygiene und niedrige Lebensstandards im Zuge dieser führten zur aufkommenden "Landlust" und der Rückbesinnung auf ländliche Freiräume. Die "Landlust" in Deutschland, welche in der folgenden Arbeit durch das Verlangen nach einem natürlichem und ländlichen Lebensstil definiert wird, äußerte sich dann Beispielsweise in der Romantisierung des Landlebens und der Großstadtkritik außerdem im UG, im Konzept der Gartenstadt-, die Siedlungs- und die Kommunenbewegung sowie im Kleingartenwesen. Diese Bewegungen sollten einen Gegensatz zur Industriewirtschaft und der damaligen Politik vom letzten drittel des 19. Jahrhunderts bis zum ersten Weltkrieg bilden.\footcite[Vgl.][S. 35]{Egnolff2015DieIdeal}\\
+Enge Wohnverhältnisse, schlechte Hygiene und niedrige Lebensstandards im Zuge dieser führten zur aufkommenden „Landlust“ und der Rückbesinnung auf ländliche Freiräume. Die „Landlust“ in Deutschland, welche in der folgenden Arbeit durch das Verlangen nach einem natürlichem und ländlichen Lebensstil definiert wird, äußerte sich dann beispielsweise in der Romantisierung des Landlebens und der Großstadtkritik außerdem im UG, im Konzept der Gartenstadt-, die Siedlungs- und die Kommunenbewegung sowie im Kleingartenwesen. Diese Bewegungen sollten einen Gegensatz zur Industriewirtschaft und der damaligen Politik vom letzten drittel des 19. Jahrhunderts bis zum ersten Weltkrieg bilden.\footcite[Vgl.][S. 35]{Egnolff2015DieIdeal}\\
 \\
-Hinter den Siedlungs- und Kommunenbewegungen stand die Idee einer Gemeinschaft die soziale und ökonomische Gleichheit sowie körperliche und geistige Gesundheit anstrebten. Hierzu diente das Landleben und die damit verbundene Rückbesinnung als Strebensziel. Die Romantisierung des Landlebens aus Sicht der Stadtbevölkerung als Raum für das gesunde Leben in Freiheit und Idylle ging aus dem Wunsch nach dem Gegenteil zum weniger natürlichen Stadtleben hervor. Diese Bestrebungen mündeten dann in die Gartenstadtbewegung welche die Misstände in der Stadtbevölkerung durch die Planung von Gartenstädten im Umkreis abfangen wollte. Die Gartenstädte sollten ein Zusammenspiel von Stadt und Land bieten welches die Lebensbedingungen der Einwohner verbessern sollte. Diese Idee geht wiederum auf Ebenezer Howard zurück welcher 1889 in seinem Werk "Garden Cities of To-morrow" (ursprünglich "Tomorrow: A Peaceful Path to Real Reform") dieses Konzept beschreibt. Die erhofften Entwicklungen fanden dennoch nicht im entsprechenden Ausmaß statt.\footcite[Vgl.][S. 36]{Egnolff2015DieIdeal}
+Hinter den Siedlungs- und Kommunenbewegungen stand die Idee einer Gemeinschaft die soziale und ökonomische Gleichheit sowie körperliche und geistige Gesundheit anstrebten. Hierzu diente das Landleben und die damit verbundene Rückbesinnung als Strebensziel. Die Romantisierung des Landlebens aus Sicht der Stadtbevölkerung als Raum für das gesunde Leben in Freiheit und Idylle ging aus dem Wunsch nach dem Gegenteil zum weniger natürlichen Stadtleben hervor. Diese Bestrebungen mündeten dann in die Gartenstadtbewegung welche die Misstände in der Stadtbevölkerung durch die Planung von Gartenstädten im Umkreis abfangen wollte. Die Gartenstädte sollten ein Zusammenspiel von Stadt und Land bieten welches die Lebensbedingungen der Einwohner verbessern sollte. Diese Idee geht wiederum auf Ebenezer Howard zurück welcher 1889 in seinem Werk „Garden Cities of To-morrow“ (ursprünglich „Tomorrow: A Peaceful Path to Real Reform“) dieses Konzept beschreibt. Die erhofften Entwicklungen fanden dennoch nicht im entsprechenden Ausmaß statt.\footcite[Vgl.][S. 36]{Egnolff2015DieIdeal}
 
 \begin{displayquote}
 „Die tatsächliche Umsetzung der Gartenstadt fand jedoch in suburbanen Gebieten und nicht als Verknüpfung von Stadt und Land statt. Die erhofften gesellschaftlichen Veränderungen blieben aus und die Bilanz der Wohnungsstatistiken der Gartenstadt-Gesellschaften war insgesamt niedrig“\footcite[S. 36]{Egnolff2015DieIdeal} 
@@ -514,10 +542,10 @@ Es lässt sich feststellen, dass die Landlust besonders stark in städtischen Si
 
 Die wahrgenommenen Nachteile sind oft die Belastungen im Zusammenhang mit dem Verkehr und die schwierige Wohnungssituation.\footcite[S. 41]{Egnolff2015DieIdeal} Trotz der Vorteile glaubt die Mehrheit der deutschen dass das Leben auf dem Land qualitativ hochwertiger sei. Dies liegt oft an einer übertriebenen Wahrnehmung für das ländliche Leben.
 
-Eine 2014 durchgeführte Umfrage des Allensbach Institus für Demoskopie zur "Sehnsucht der Stadtbewohner nach Ländlichkeit" belegte den Trend der Landlust. So sind 40 Prozent der Befragten der Meinung, dass das Leben auf dem Land lebenswerter sei.\footcite[Vgl.][S. 15 Abb.2]{Dr.ThomasPetersen2014DieLandlichkeit}
+Eine 2014 durchgeführte Umfrage des Allensbach Institus für Demoskopie zur „Sehnsucht der Stadtbewohner nach Ländlichkeit“ belegte den Trend der Landlust. So sind 40\% der Befragten der Meinung, dass das Leben auf dem Land lebenswerter sei.\footcite[Vgl.][S. 15 Abb.2]{Dr.ThomasPetersen2014DieLandlichkeit}
 
 
-Die Vorteiel für das Land seien demnach:
+Die Vorteile für das Land seien demnach:
 
 \begin{itemize}
     \item Gesundheit
@@ -527,7 +555,7 @@ Die Vorteiel für das Land seien demnach:
     \item günstiger Wohnraum
 \end{itemize}
 
-Interressant ist dass 27 Prozent der 1520 Befragten die Assoziation „einsam“ dem Landleben, aber zu 39 Prozent dem Leben in der Stadt zuordnen. Laut Dr. Petersen handele es sich hierbei um ein Klischee demnach Menschen in der anonymen Großstadt vereinsamen. Dieses Klischeebild hätte sich in der Umfrageforschung über Jahrzehnte hinweg jedoch nie bestätigen lassen. Dennoch halte sich das Klischee bis heute hartnäckig.\footcite[Vgl.][S. 7ff]{Dr.ThomasPetersen2014DieLandlichkeit}
+Interessant ist, dass 27 Prozent der 1520 Befragten die Assoziation „einsam“ dem Landleben, aber zu 39 Prozent dem Leben in der Stadt zuordnen. Laut Dr. Petersen handele es sich hierbei um ein Klischee demnach Menschen in der anonymen Großstadt vereinsamen. Dieses Klischeebild hätte sich in der Umfrageforschung über Jahrzehnte hinweg jedoch nie bestätigen lassen. Dennoch halte sich das Klischee bis heute hartnäckig.\footcite[Vgl.][S. 7ff]{Dr.ThomasPetersen2014DieLandlichkeit}
 
 \begin{figure}[htbp]
 \centering
@@ -537,7 +565,7 @@ Interressant ist dass 27 Prozent der 1520 Befragten die Assoziation „einsam“
 \end{figure}
 
 \begin{displayquote}
-"Je mehr Menschen in der Stadt leben, je weniger Kontakt sie zum tatsächlichen Landleben haben, desto mehr wird das Land zu einer Pro- jektionsfläche ihrer Phantasien."\footcite[S. 8]{Dr.ThomasPetersen2014DieLandlichkeit}
+"Je mehr Menschen in der Stadt leben, je weniger Kontakt sie zum tatsächlichen Landleben haben, desto mehr wird das Land zu einer Projektionsfläche ihrer Phantasien."\footcite[S. 8]{Dr.ThomasPetersen2014DieLandlichkeit}
 \end{displayquote}
 
 Die Kategorien Stadt und Land können die räumliche, soziale und wirtschaftliche Realität nach dem Stadtforscher Angelus Eisinger kaum mehr beschreiben. Er schlät staddessen den Begriff „Stadtland“ als schwer trennbare, ineinanderfließende Siedlung vor und betont, dass es sich bei „Land“ lediglich um eine Idealisierung von Vergangenem handele. \footcite[Vgl.][S. 40]{Egnolff2015DieIdeal}
@@ -585,26 +613,75 @@ Lieberecht Migge schrieb 1926 in Hinblick auf diese Entwicklung "Das grüne Mani
 
 \subsection{Urbane Landwirtschaft aus globaler Perspektive (nicht ganz fertig ***)}
 
-Ernst May der 1922/23 Trabantenstädte erdachte, die von "Kulturbändern" umgeben sein sollten, auf diesen dann eine intensive Landwirtschaft entstehen sollte. Gemüse und Kleinvieh von Kleinbauern sollte so herangezogen und -gezüchtet werden, welches dann als Nahrungsmittel für die Siedlungen gefördert werden sollte. Dieser Ansatz floss teilweise in den 1920er Jahren in den Städtebau mit ein und stärkte dabei das Kleingartenwesen.
+Betrachtet man UL aus globaler Perspektive, so kann man ihre lange Tradition innerhalb von gesellschaftlichen und kulturellen Praktiken in Bezug auf Stadt und Gemeinschaft erkennen. Die Anfänge der Ul reichen Jahrzehnte oder Jahrhunderte zurück bis sie schließlich in ihre jetzige Form mündet. Beispiele hierfür wären unter Anderem die europäischen Schrebergärten, Gemüsefelder in afrikanischen Kolonialstädten mit Wurzeln in alten kommunalen Praktiken, das chinesische System der Weiderverwendung des Nachtbodens oder die Chinampas von Mexiko-Stadt welche ein Anbausystem vor der Ankunft von Kolumbus darstellten.
 
-Mitte der 1970er Jahre erreichte dann die Idee der Community Gardens Europa. Hier nutzten fleißige Anwohner benachteiligter Viertel, beispielweise in New York, Brachflächen der Stadt und pflanzten Blumen, Gemüse und Kräuter an. Diese Bewegung erreichte Deutschland etwa 1990. Berlin gilt heute als eine der deutschen Hochburgen für Gemeinschaftsgärten. Zusammenfassend lässt sich sagen, dass urbane Landwirtschaft häufig als Rettungsring betrachtet wird. Das Bewusstsein für die vermeintlich lebensrettende Methode der Landwirtschaft scheint immer dann stark zu wachsen wenn es den Bewohnern urbaner Gebiete besonders schlecht ergeht. Dies wurde auch 2007 deutlich als schwere Waldbrände in Griechenland wüteten. Die Krise führte zu einem vermehrten Anbau von Nahrungsmitteln innerhalb der griechischen Städte und führte sogar zur Ausbeutung von städtisch landwirtschaftlichen Räumen durch Zivilisten. Seit 2012 wird die urbane Landwirtschaft von der Zivilgesellschaft oder den einzelnen Gemeinden verbreitet.
+Jac Smit, Joe Nasr und Annu Ratt beschreiben in Ihrem Beitrag \textbf{Urban Agriculture Yesterday and Today} zum Werk \textbf{Urban Agriculture: Food Jobs and Sustainable Cities} von 2001 die Anfänge der Urbanen Landwirtschaft. Dort lassen sich auch einige Beispiele für globale UL finden, welche vom Urban Agriculture Network aus verschiedenen Quellen Zusammengetragen wurden. Stand 2001.
+
+\begin{displayquote}
+\textbf{Afrika:}
+\begin{itemize}
+    \item Mali: Bamako ist mit Gartenbauprodukten autark und einige Produkte werden außerhalb der Metropolregion zum Verzehr versandt
+    \item Uganda: In Kampala werden 70 Prozent des Geflügelbedarfs (Fleisch und Eier) innerhalb der Stadt produziert.
+    \item Sambia: In Lusaka macht die Nahrungsmittelproduktion 33 Prozent des Gesamtverbrauchs der Hausbesetzer aus.
+\end{itemize}
+\textbf{Asien}
+\begin{itemize}
+    \item China: In den 1980er Jahren wurden über 90 Prozent des Gemüsebedarfs und über die Hälfte des Fleisch- und Geflügelbedarfs in den 18 größten Städten Chinas durch Produkte aus städtischen Provinzen gedeckt.
+    \item Indonesia: In Jakarta werden fast 20 Prozent der von Hausbesetzern verzehrten Lebensmittel selbst produziert.
+    \item Nepal: In Kathmandu deckten 37 Prozent der befragten Lebensmittelhersteller ihren Bedarf an pflanzlicher Haushaltsnahrung und 11 Prozent den Bedarf an Tiernahrung.
+    \item Singapur: Achtzig Prozent des Geflügels und 25 Prozent des verzehrten Gemüses werden in der Stadt produziert.
+\end{itemize}
+\textbf{Europa}
+\begin{itemize}
+    \item Rumänien: Mit neuen Regierungsrichtlinien und -programmen von 1992 bis 1998 stieg die städtische Produktion von 14 auf 26 Prozent der gesamten landwirtschaftlichen Produktion.
+\end{itemize}
+\textbf{Amerika}
+\begin{itemize}
+    \item Kuba: Von 1992 bis 2000 stieg die städtische Nahrungsmittelproduktion um 300 Prozent und die Kinder essen viermal so viel Gemüse wie vor einem Jahrzehnt.
+    \item USA: Dreißig Prozent der landwirtschaftlichen Produkte des Landes werden in Ballungsräumen produziert.
+\end{itemize}
+\end{displayquote}
+
+Die Anforderungen an die Produktion von Nahrungsmitteln in der Stadt sind hoch. Pflanzen und Tiere müssen strapazierfähig gegenüber den städtischen Bedingungen sein und die begrenzte und kostbare Bodenfläche erfordert den Anbau von lukrativen und hochwertigen Produkten.\\ 
+\\
+Im Laufe der Zeit entwickelten einige Gesellschaften Techniken und Systeme, die die Landwirtschaft als Tätigkeit in die Stadt integrierten. Andere wiederum entwickelten die Städte getrennt von der Landwirtschaft. Dieser unterschiedliche Ansatz spiegelt auch unterschiedliche Einstellungen zur Art wieder, wie natürliche und menschengemachte Umgebungen miteinander umgehen und hat kulturelle Wurzeln.\\
+\\
+Im späten 19. Jahrhundert begannen Maschinen die landwirtschaftliche Arbeit zu erleichtern und die Produktion sowie die Vermarktung der Erzeugnisse stieg an. Die UL reagierte wiederum auf diese Entwicklung und spezialisierte sich beispielsweise auf Nischenmärkte, den Tauschhandel und den Devisenhandel sowie die Abfallverwertung. Die Informationsrevolution verbreitete dann das Wissen der städtischen Lebensmittelproduktion über nationale und kulturelle Grenzen hinweg und ermöglichte auch neue Formen des Marketings. Nach dem zweiten Weltkrieg schritt die Urbanisierung in manchen Ländern schneller voran als der Bevölkerungswachstum, die Wirtschaft oder Infrastrukturen. Daher fiel die Last der Lebensmittelversorgung mancherorts auf die Stadtbewohner selbst. Auf allen Kontinenten aber führte die Not an Bebauungsflächen oder Nahrungsmitteln zu intensivierter UL und zu einem erhöhten Bewusstsein für Landwirtschaft in Hinblick auf die Ernährungssicherheit. Ob UL nun von den ersten städtischen Siedlern entwickelt wurde um die Ernährung zu sichern oder ob sie durch die Schrittweise Veränderung der Nahrungsmittelproduktion entstand, eine Rolle spielte UL zu jeder Zeit. Teilweise war diese sogar unerlässlich.  \footcite[Vgl.][S. 1-4]{Smit2001UrbanCities}
+
+\subsection{Beispiele aus der Geschichte der urbanen Landwirtschaft}
+
+
+Laut Smit, Nasr und Ratt gäbe es sichere Hinweise auf groß angelegteBaumkulturen in Mayastädten. Hinweise lassen sich in Städten wie Caracol Lamanai und Belize finden. Die bevölkerungsdichte in Caracol betrug demnach ca. 1.000 Menschen pro Quadratkilometer bei einer Gesamtbevölkerung von 115.000 - 150.000 Menschen.\footcite[Vgl.][S. 5-6]{Smit2001UrbanCities}Zum Vergleich: Das \textbf{Amt für Statistik Berlin-Brandenburg} gibt an, dass am 31.12.2017 in Berlin ca. 4.055 Menschen pro Quadratkilometer in der deutschen Hauptstadt lebten.\footcite[Vgl.]{AmtfurStatistikBerlin-Brandenburg2017NoTitle}Die Stadtlandschaft von Caracol bestand aus dichten Gebäudegruppen die mit landwirtschaftlichen Terassen durchzogen waren. Forscher glauben, dass diese Archtiektur seinen Fokus auf die Selbstversorgung setzte. Die Terassen und Stauseen durchzogen die gesamte Stadt.\footcite[Vgl.][S. 5-6]{Smit2001UrbanCities}
+
+Landwirte reaktiverten mit Hilfe von Archiologen an mehreren Standorten in Peru, Guatemala und Mexiko dei alten Systeme der UL und erhielten interssante Erkenntnise über die damalige Landwirtschaft.\footcite[Vgl.][S. 6]{Smit2001UrbanCities}{zietiert nach Cardich und L. Fowler, 1987 National Geographic Research, Vol. 3, No.1.}
+In einem Fall unterstützen die Produktionsniveaus zwei Familien auf 1 Hektar (0,40 Hektar). In einem zweiten Fall wäre eine Wiederbelebung der alten Terrassentechnik speziell erfolgreich. Eine der wichtigsten Erkenntnisse ist der Einsatz von Aqua-Terra-Systemen, in denen Wasser- und Landpflanzen in Symbiose produziert werden. Solche Systeme sind besonders relevant für die städtische Landwirtschaft, da sie in Gebieten mit weniger gutem Boden, steilen Hängen und Feuchtgebieten effektiv sind. 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10cm]{image_folder/SchaubildTerassenanbau.png}
+\caption{Vereinfachtes Konzept des Terrassenanbaus, Eigene Zeichnung}
+\label{fig:Terassenlandwirtschaft}
+\end{figure}
+
+In vielen alten Systemen würde zudem das Klima durch Techniken wie Bewässerung und Erwärmung des Bodens und der Luft gemildert, um die Vegetationszeiträume zu verlängern. In Europa würde beispielsweise Kompost, einschließlich Pferdemist, schon seit langem zur Beheizung von erhöhten Gemüsebeeten verwendet. Seit hunderten Jahren und in verschiedenen Teilen der Welt wären Anbau und Viehzucht innerhalb und außerhalb der Stadtmauern Standard. Bevor in der zweiten Hälfte des 19. Jahrhunderts "moderne" städtische Abwassersysteme entwickelt wurden, wäre die städtische Landwirtschaft die wichtigste Behandlungs- und Entsorgungsmethode für städtische Abfälle gewesen.\footcite[Vgl.][S. 6-7]{Smit2001UrbanCities}
+
+Die Liste der Arten von urbaner Landwirtschaft in alten Kulturen ist lang und beschreibt die Wichtigkeit von marnknaher Landwirtschaft vor der Erfindung von Kühlsystemen oder schnellen Transportmitteln. Aber auch in späteren Jahren beweist die urbane Landwirtschaft ihre Relevanz.
+
+Ernst May erdachte beispielsweise 1922/23 Trabantenstädte erdachte zu, die von "Kulturbändern" umgeben wurden, auf diesen dann eine intensive Landwirtschaft entstehen sollte. Gemüse und Kleinvieh von Kleinbauern sollte so herangezogen und gezüchtet werden, welches dann als Nahrungsmittel für die Siedlungen gefördert werden sollte. Dieser Ansatz floss teilweise in den 1920er Jahren in den Städtebau mit ein und stärkte dabei das Kleingartenwesen.
+
+Mitte der 1970er Jahre erreichte dann die Idee der Community Gardens Europa. Hier nutzten fleißige Anwohner benachteiligter Viertel, beispielweise in New York, Brachflächen der Stadt und pflanzten Blumen, Gemüse und Kräuter an. Diese Bewegung erreichte Deutschland etwa 1990. Berlin gilt heute als eine der deutschen Hochburgen für Gemeinschaftsgärten.\\
+\\
+Zusammenfassend lässt sich sagen, dass urbane Landwirtschaft häufig als Versorgungsrettung betrachtet wird. Das Bewusstsein für die vermeintlich lebensrettende Methode der Landwirtschaft scheint immer dann stark zu wachsen wenn es den Bewohnern urbaner Gebiete besonders schlecht ergeht. Dies wurde auch 2007 deutlich als schwere Waldbrände in Griechenland wüteten. Die Krise führte zu einem vermehrten Anbau von Nahrungsmitteln innerhalb der griechischen Städte und führte sogar zur Ausbeutung von städtisch landwirtschaftlichen Räumen durch Zivilisten. Seit 2012 wird die urbane Landwirtschaft von der Zivilgesellschaft oder den einzelnen Gemeinden verbreitet.
 
 Ein weiteres Beispiel für den Antrieb von Urbaner Landwirtschaft in Kriesenzeiten lieferte Kuba in den 90er Jahren. Durch den Zusammenbruch der Sowjetunion kam es auf der Insel auch zum Zusammenbruch der dortigen Wirtschaft, da diese stark von der sowjetischen Ölversorgung abhing. Durch den fehlenden Rohstoff konnten beispielsweise keine Erntemaschinen betankt werden. Zudem mangelte es auch an Düngern und Pestiziden. Die Einwohner der Insel setzten immer stärker auf die urbanen Anbaumethoden. Heute gehört der Inselstaat zu den Ländern die große Fortschritte zur Bekämpfung von Hunger durch Urbane Landwirtschaft gemacht haben.
 
 Detroit welche von einer starken Wirtschaft profitierte geriet vor Jahrzehnten in eine schwere Krise. Die einstige florierende Automobilbranche liegt brach. Dadurch zogen viele arbeitslose Einwohner aus der Stadt. Durch die ungenutzten urbanen Gebiete konnte aber in den darauffolgenden Jahren eine aufsteigende Landwirtschaft entstehen. Brachland und Dachterrassen wurden nun zu ca. 1200 fruchtbare Gärten verwandelt. „Nach einer Studie der Michigan State University könnte Detroit mit Stadtfarmen, Nachbarschaftsgärten und Gewächshäusern drei Viertel ihres Gemüses und vierzig Prozent ihres Obstes selbst produzieren.“ https://www.bzfe.de/inhalt/gemuese-statt-cadillac-urban-gardening-in-detroit-27424.html
 
 
-
-\subsection{Urbane Landwirtschaft bis heute***}
-
-Die Urbane Landwirtschaft hat es mittlerweile immer öfter in die öffentlichen Medien geschafft. Durch die Ansätze des Guerilla Gardenings oder Skyfarmings erzeugt das Themenfeld auch größeres Interesse, beinhaltet aber auch Projekte und Ansätze ohne deutlichen Mehrwert. Dies bedeutet das manche Methoden der UL einen unzureichend Nachhaltigkeitsaspekt bieten oder schlichtweg nicht wirtschaftlich arbeiten. Beispiele für UL folgen. Es kommt hinzu, dass die UL keine nennenswerte Rolle in der Ausbildung von Landwirtschaftsberufen spielt. Das Bewusstsein für UL in der modernen Stadt ändert sich aber durch ambitionierte Architekten, Stadtplaner und Einwohner stetig und Brachflächen innerhalb von Städten werden nicht mehr nur einfach begrünt sondern nehmen auch einen immer größeren Platz in der professionellen Planung ein um einen Mehrwert solcher Flächen zu gewährleisten.
-
-"Man versucht die Landwirtschaft als Partner zu gewinnen, um die Freiflächen in der Stadtregion zu unterhalten und als öffentlichen Raum zu bespielen." Frank Lohrberg - Urban Gardening Christa Müller
-
 \section{Gegenwart der urbanen Landwirtschaft}
 \subsection{Aufgaben und Motivation***}
 
-Wie gut ein Land versorgt ist hängt von vielen Faktoren ab. Darunter zählt der wirtschaftliche Status, die Verfügbarkeit von Ressourcen, die jeweilige Ernährungspolitik und wie gut die Infrastruktur zur Lebensmittelversorgung (Transport, Lager, Vermarktung uvm.) ist. Demnach unterscheiden sich die Aufgaben, die urbaner Landwirtschaft zugewiesen werden je nach dem „Entwicklungsgrad“ des umgebenden Landes.\footcite{SmitUrbanToday} In Industrieländern ist sie von sozialpolitischer Natur.\footcites[][S. 21]{Berges2014UrbaneStadt}[S.26f]{SmitUrbanToday} In Entwicklungsländern hingegen dient sie vorwiegend zur Subsistenz oder als zusätzliches Einkommen für die Stadtbewohner. \footcites[Vgl.][S.75]{Nugent2000TheEconomies}[S.26f]{SmitUrbanToday}\\
+Wie gut ein Land versorgt ist hängt von vielen Faktoren ab. Darunter zählt der wirtschaftliche Status, die Verfügbarkeit von Ressourcen, die jeweilige Ernährungspolitik und wie gut die Infrastruktur zur Lebensmittelversorgung (Transport, Lager, Vermarktung uvm.) ist. Demnach unterscheiden sich die Aufgaben, die urbaner Landwirtschaft zugewiesen werden je nach dem „Entwicklungsgrad“ des umgebenden Landes.\footcite{Smit2001UrbanToday} In Industrieländern ist sie von sozialpolitischer Natur.\footcites[][S. 21]{Berges2014UrbaneStadt}[S.26f]{Smit2001UrbanToday} In Entwicklungsländern hingegen dient sie vorwiegend zur Subsistenz oder als zusätzliches Einkommen für die Stadtbewohner. \footcites[Vgl.][S.75]{Nugent2000TheEconomies}[S.26f]{Smit2001UrbanToday}\\
 \\
 Warum urbaner Gartenbau noch bedeutend für Entwicklungsländer ist, erläutert Moustier: \footcites[Vgl.][S.6ff]{Moustier2007UrbanSupplier} Gängig sei der Anbau von schnell verderblichen Lebensmitteln wie Blattgemüse oder Tomaten. Durch die Nähe zur Stadt ist der Transportweg in der Regel kürzer und die Produkte gelangen zeitnah zum Konsumenten. Zusätzlich ist in den meisten Fällen die Lieferkette kürzer, was den Preis der Lebensmittel senkt. Bei weniger verderblichen Lebensmitteln schwanke der Anbau zwischen den Stadtrandgebieten und ruralem Anbau. Den Konsumenten sei auch die Frische der Produkte besonders wichtig, da ihnen oft eine geeignete Lagerung wie Kühlschränke fehle. Bedenklich sei allerdings die Qualität der Lebensmittel durch die verunreinigte Wasser- und Bodenqualität sowohl in der Stadt als auch im Umland. Jedoch sorge die Nähe für einen besseren Informationsaustausch zwischen Konsument und Produzent zum Anbau. Das erleichtert den städtischen Gemeinden und den Menschen vor Ort die Kontrolle ihrer Ernährungssicherheit. Darüber hinaus habe urbane Landwirtschaft oft damit zu tun, dass viele Städte geschichtlich an rohstoffreichen Gegenden angesiedelt waren und das Umland von Städten daher gute Anbaubedingungen vorweist. Die saisonalen Bedingungen spielen, Moustier zufolge, ebenfalls eine wichtige Rolle. In „schlechten“ Jahreszeiten sind Stadtbewohner angewiesen auf die Zufuhr von ferner angebauten Nahrungsmitteln. \\
 \\
@@ -613,37 +690,59 @@ Auch der private Anbau in diesen Städten sei nicht zu vernachlässigen. Zu der 
 „With very few exceptions, a clear negative correlation between participation in agricultural activities and level of welfare is noted. Participation rates for the poorest quintile are extremely high, over 50\% in 8 out of 15 countries, proving how urban agriculture plays an important role for a non-negligible number of poor households in the developing world.“\footcite[S.268]{Zezza2010UrbanCountries}
 \end{displayquote}
 
-Diverse Organisationen setzen sich für den Einsatz von UL als Lösung für Unterernährung und Armut in Entwicklungsländer ein, eines der größten ist wohl die Ernährungs- und Landwirtschaftsorganisation der Vereinten Nationen (FAO - The Food and Agriculture Organisation of the United Nations)\footcite[Vgl.{FAOAboutNations}. In diesem Zusammenhang äußert sich FAO Generaldirektor Jaques Diouf:
+Diverse Organisationen setzen sich für den Einsatz von UL als Lösung für Unterernährung und Armut in Entwicklungsländer ein, eines der größten ist wohl die Ernährungs- und Landwirtschaftsorganisation der Vereinten Nationen (FAO - The Food and Agriculture Organisation of the United Nations).\footcite[Vgl.][S.6ff]{FAOAboutNations} In diesem Zusammenhang äußert sich FAO Generaldirektor Jaques Diouf:
 
 \begin{displayquote}
-„\[...\] urban poverty tends to be fuelled by people migrating towards the cities in an attempt to escape the deprivations associated with rural livelihoods. Partly due to the rural decline, the world is urbanizing at
-a fast pace and it will not be long before a greater part of developing country populations is living in large cities. Therefore, urban food security and its related problems should also be placed high on the agenda in the years to come.“\footcite[S.5f]{FoodandAgricultureOrganizationoftheUnitedNations2006The2006}
+„\lbrack...\rbrack urban poverty tends to be fuelled by people migrating towards the cities in an attempt to escape the deprivations associated with rural livelihoods. Partly due to the rural decline, the world is urbanizing at a fast pace and it will not be long before a greater part of developing country populations is living in large cities. Therefore, urban food security and its related problems should also be placed high on the agenda in the years to come.“\footcite[S.5f]{FoodandAgricultureOrganizationoftheUnitedNations2006The2006}
 \end{displayquote}
+In Industriestaaten sei die Unsicherheit über die Lebensmittelversorgung hingegen nicht so stark wie in Entwicklungsländern. Smit et. al. geben dafür drei Gründe an: Zum einen sei das Verhältnis zwischen den Lebensmittelkosten und dem urbanen Haushaltsbudget in Industrieländern geringer. Während Stadtbewohner im globalen Norden ein Drittel bis ein Fünftel ihres Haushaltsbudgets für Essen verbrauchen, liegt der Anteil der Lebensmittelkosten in ärmeren Ländern zwischen ein Drittel und vier Fünftel. Ein weiterer Grund sei, dass die Infrastruktur zur Nahrungsmittelversorgung vollständiger sei. Und der dritte Punkt sei die höhere Lebensmittelqualität aber auch, dass sie zugänglicher seien für die Stadtbevölkerung. \footcites[Vgl.][S.27]{Smit2001UrbanToday} Smit et. al. zufolge wachse das Interesse an urbanen Gemeinschaftsgärten in Europa und den vereinigten Staaten. Der Antrieb dafür sei unter anderem die Sorge um die Nahrungsmittelqualität der globalen Lebensmittelkonzerne. Angeknüpft dazu seien soziale politische Motive. Ferner führte das Leibniz-Zentrum für Agrarlandschaftsforschung 2011 bis 2014 eine Innovationsanalyse zu urbaner Landwirtschaft in den vereinigten Staaten und Deutschland aus. Eines der Erkenntnisse war, dass heutige UL-Formen in den untersuchten Ländern vorwiegend soziale Neuerungen zeigen \footcite{Berges2014UrbaneStadt}. Passend dazu ist die mediale Wahrnehmung des Begriffs Urban Gardening in Deutschland, den Egnolff vor drei Jahren untersuchte. Ihren Analysen zufolge werde dem Begriff zwar auch ökonomische Bedeutung zugewiesen, allerdings seien die politische, Lifestyle-, soziale als auch nachhaltige Bedeutung nicht zu vernachlässigen.\footcite[Vgl.][S.119ff]{Egnolff2015DieIdeal}. 
+
+%------------------------
+% über Motive von innovativen Konzepten schreiben: verdichtete Städte, Zuwachs...
+%------------------------
+
+\subsection{Aktuelle Beispiele urbaner Landwirtschaft}
 
 
-In Industriestaaten sei die Unsicherheit über die Lebensmittelversorgung hingegen nicht so stark wie in Entwicklungsländern. Smit et. al. geben dafür drei Gründe an: Zum einen sei das Verhältnis zwischen den Lebensmittelkosten und dem urbanen Haushaltsbudget in Industrieländern geringer. Während Stadtbewohner im globalen Norden ein Drittel bis ein Fünftel ihres Haushaltsbudgets für Essen verbrauchen, liegt der Anteil der Lebensmittelkosten in ärmeren Ländern zwischen ein Drittel und vier Fünftel. Ein weiterer Grund sei, dass die Infrastruktur zur Nahrungsmittelversorgung vollständiger sei. Und der dritte Punkt sei die höhere Lebensmittelqualität aber auch, dass sie zugänglicher seien für die Stadtbevölkerung. \footcites[Vgl.][S.27]{SmitUrbanToday} Smit et. al. zufolge wachse das Interesse an urbanen Gemeinschaftsgärten in Europa und den vereinigten Staaten. Der Antrieb dafür sei unter anderem die Sorge um die Nahrungsmittelqualität der globalen Lebensmittelkonzerne. Angeknüpft dazu seien soziale politische Motive. Ferner führte das Leibniz-Zentrum für Agrarlandschaftsforschung 2011 bis 2014 eine Innovationsanalyse zu urbaner Landwirtschaft in den vereinigten Staaten und Deutschland aus. Eines der Erkenntnisse war, dass heutige UL-Formen in den untersuchten Ländern vorwiegend soziale Neuerungen zeigen \footcite{Berges2014UrbaneStadt}. Passend dazu ist die mediale Wahrnehmung des Begriffs Urban Gardening in Deutschland, den Egnolff vor drei Jahren untersuchte. Ihren Analysen zufolge werde dem Begriff zwar auch ökonomische Bedeutung zugewiesen, allerdings seien die politische, Lifestyle, soziale und nachhaltige Bedeutung nicht zu vernachlässigen.\footcite[Vgl.][S.119ff]{Egnolff2015DieIdeal}
+%Die Urbane Landwirtschaft hat es mittlerweile immer öfter in die öffentlichen Medien geschafft. Durch die Ansätze des Guerilla Gardenings oder Skyfarmings erzeugt das Themenfeld auch größeres Interesse, beinhaltet aber auch Projekte und Ansätze ohne deutlichen Mehrwert. Dies bedeutet das manche Methoden der UL einen unzureichend Nachhaltigkeitsaspekt bieten oder schlichtweg nicht wirtschaftlich arbeiten. Beispiele für UL folgen. Es kommt hinzu, dass die UL keine nennenswerte Rolle in der Ausbildung von Landwirtschaftsberufen spielt. Das Bewusstsein für UL in der modernen Stadt ändert sich aber durch ambitionierte Architekten, Stadtplaner und Einwohner stetig und Brachflächen innerhalb von Städten werden nicht mehr nur einfach begrünt sondern nehmen auch einen immer größeren Platz in der professionellen Planung ein um einen Mehrwert solcher Flächen zu gewährleisten.
+
+%"Man versucht die Landwirtschaft als Partner zu gewinnen, um die Freiflächen in der Stadtregion zu unterhalten und als öffentlichen Raum zu bespielen." Frank Lohrberg - Urban Gardening Christa Müller
 
 
+Eine umfassende Statistik über die weltweite Verbreitung von UL mit all den dazugehörigen Arten gibt es derzeit nicht. Die meisten Erhebungen umfassen nur Entwicklungs- und Schwellenländer hinsichtlich der Bekämpfung von Armut und Hunger. Unabhängig davon lässt sich sagen, dass die aktuellen Formen vom Gemüseanbau am Balkon bis hin zu innovativen Hochhauskonzepten reichen. \footcites[Vgl.][S.24]{Berges2014UrbaneStadt}[S.268]{Zezza2010UrbanCountries}[S.14]{Al-Kodmany2018TheCity} Wie in den Grundlagen beschrieben, teilt sich UL unter anderem in subsistenziell, soziokulturell und kommerziell motivierten Formen auf. In Anbetracht der zentralen Fragestellung dieser Forschungsarbeit stehen kommerzielle UL-Formen im Fokus der Untersuchung. Da diese Form im Vergleich zur soziokulturellen und subsistenziellen die größte Menge an Konsumenten erreicht, ist ihre Auswirkung groß genug, um sie auf Nachhaltigkeit zu prüfen. Daher widmet sich Kapitel 10 vorallem dieser Landwirtschaftsform. Dennoch ist es hilfreich einen Eindruck zur erhalten, wie unterschiedlich sich urbane Landwirtschaft durch ihre Motive ausdrückt. Das zeigen folgende Beispiele:
 
-\subsection{Aktueller Stand der urbanen Landwirtschaft}
+\subsubsection*{Vereinfachte Hydrokultur in Ecuador}
+Wie im vorigen Kapitel beschrieben, unterstützt die FAO urbane und peri-urbane Projekte gegen Hunger und Armut. Besonders seit 1991 fördere sie Workshops zum vereinfachten Hydrokulturanbau (Pflanzenanbau mit Substraten anstelle von Erde).\footcites[Vgl.][o.P. (S.1)]{Stajano2003SIMPLIFIEDEcuador} Vereinfachte Hydrokultur unterscheide sich von hochwertiger Hydrokultur in dem Sinne, dass sie - im Vergleich zu industriellen Produktionen - ausgelegt ist auf die Ernährung von armen Familien und daher wenig Ressourcen verwendet. Vorteile dieser Methode seien unter anderem die einfache Erlernung, die Vermeidung von verseuchtem Boden und flexible Anbaustellen in Städten. Ein Beispiel dazu ist das 2000 umgesetzte Hydrokultur-Projekt in urbanen Regionen Ecuadors.\footcite[Vgl.][o.P. (S.2f)]{Stajano2003SIMPLIFIEDEcuador}. Ziel des Projektes war es Kindern unter sechs Jahren Zugang zu qualitativen Lebensmitteln zu bieten und einkommensarmen Familien durch diese Seminare nicht nur diese Anbaumethode beizubringen sondern auch einen besseren Lebensstandard zu bieten und im Idealfall ein sicheres Einkommen zu ermöglichen. Schlussendlich wurden nicht nur die aufgelisteten Ziele erreicht, darüber hinaus wurden die betroffenen Kinder durch die gesunde Ernährung seltener krank und das Projekt kam so gut bei den jeweiligen Gemeinden an, dass Interesse besteht Projekt eigenständig auszubauen. 
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=14cm]{image_folder/the_plant_1.jpg}
-    \includegraphics[width=14cm]{image_folder/the_plant_2.jpg}
-  \caption{The Plant in Chicago} 
+    \caption{The Plant im Zentrum Chicagos}
 \end{figure} 
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=14cm]{image_folder/the_plant_2.jpg}
+    \caption{Hydroponischer Plfanzenanbau in The Plant}
+\end{figure} 
 
-\begin{itemize}
-\item Wie in der Definition zu UL 
-\item aus dem vorigen Kapitel diverse Motive für UL aufgelistet und dass es vom wirtschaftlichen Status abhängt. 
-\item Beispiele aus Mikro und Mesoebene 
-\item 
-\item im folgendenen vor allem beispiele aus der kommerziellen Ebene. 
-\end{itemize}
+\subsubsection*{The Plant (Chicago)}
+Das im Zentrum Chicagos gelegene The Plant war vor seiner aktuellen Gebäudenutzung eine Fleischverarbeitungsanlage. Dank staatlicher Unterstützung wurde aus dem 8000 Quadratmeter alten Warenhaus eine energieneutrale Vertical Farm\footnote{Unter Vertical Farming versteht man eine Landwirtschaft betrieben in einem mehrstöckigen Gebäude. Nähere Informationen dazu folgen im Kapitel 10}. Das heißt auf mehreren Etagen des Gebäudes werden unter anderem Pflanzen, Gemüse und Pilze angebaut. Ergänzend dazu werden regelmäßig Kurse zum Anbau und zur Ernährung gegeben. The Plant beherbergt mehrere kleine Lebensmittelunternehmen, sowie eine Brauerei und eine Gemeinschaftsküche. Aufgrund des energieneutralen Gebäudekonzeptes ordnen Berges et. al. dieses Projekt als innovativ ein. Das Gebäude beinhaltet nämlich eine Biogasanlage, die ausreichend Lebensmittelabfall in Elektrizität und Wärme verbrennt, um das Haus zu heizen und zu kühlen.  \footcites[Vgl.][S.18]{Al-Kodmany2018TheCity} 
 
-\subsection{Aktueller Stand der Lebensmittelversorgung in Städten (im Bezug auf Nachhaltigkeit)***} 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=14cm]{image_folder/plantagon.png}
+  \caption{Plantagon - Vertical-Farming-Gebäudekonzept}
+  \label{fig:plantagon}
+\end{figure} 
+
+\subsubsection*{Plantagon (Schweden)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Gegründet im Jahr 2008 in Schweden ist Plantagon ein internationales Unternehmen, das durch sein innovatives Vertikal-Farming-Gebäudekonzept viele Preise gewonnen hat.\footcite[Vgl.]{PlantagonAwardsPlantagon} Besonders innovativ sei ihr Konzept zum automatisierten Lebensmittelanbau (siehe Abbildung \ref{fig:plantagon}), das wie folgt funktioniere:\footcite[Vgl.][S.21f]{Al-Kodmany2018TheCity}  In der Mitte eines Gebäudes befindet sich eine Helixstruktur. Am unteren Ende der Helix werden von Mitarbeitern Samen in Töpfe platziert. Daraufhin werden mit Hilfe eines Aufzuges diese Töpfe am oberen Ende der Spirale befördert. Hier wird jede Pflanze entlang der Helix einzeln durch robotische Förderbänder abhängig vom Sonnenlicht, dem Alter und ihre Größe hoch und runter bewegt. Zur Ernte werden sie dann anschließend nach unten befördert. Trotz mehreren Preisen und angemeldetem Patent existiert derzeit noch kein umgesetztes Hochhaus nach diesem Konzept.
+
+
+
+\subsection{Aktuelle Lebensmittelversorgung in Städten***} 
 
 „Nahrung ist eine grundlegende Basis für die Existenz menschlichen Lebens". Hiermit fasst Stierand Informationen aus von Blanckenburgs Text in Zukunft, Welternährung - Gegenwartsprobleme und Strategien" zusammen. \footcite[S.122f]{Stierand2008StadtLebensmittel} „Jeder Mensch benötigt eine angemessene Ernährung, um körperlich und geistig leistungsfähig zu bleiben. (Auch für die Aufrechterhaltung der Gesundheit und die Abwehr von Krankheiten ist ausreichende Ernährung wichtig.“ \footcite{Blanckenburg1987ZukunftDie}
 
@@ -656,13 +755,13 @@ Laut Stierand hat die Erzeugung und Verarbeitung von Lebensmitteln in der heutig
 \label{fig:massstab}
 \end{figure}
 
-Mit der Entstehung von regionalen und nationalen Ketten dehnte sich der Handel aus und das Ernährungssystem erfuhr eine "Delokalisation“ \footcite{MASSIMOMONTANARI1993DerEuropa}[188ff]. Seitdem ist "die Bindung zwischen Wohnort und Nahrung [...]aufgehoben, die Ernährung ist nicht mehr von saisonalen Engpässen und Überschüssen abhängig.\footcite{Stierand2008StadtLebensmittel, S.122f} Dieser Veränderung durch die Ausbreitung der Filialen und der folglich flächendeckenden Versorgung wirkte sich sowohl in städtischen als auch in ländlichen Regionen aus. 
+Mit der Entstehung von regionalen und nationalen Ketten dehnte sich der Handel aus und das Ernährungssystem erfuhr eine "Delokalisation“ \footcite{MASSIMOMONTANARI1993DerEuropa}[188ff]. Diese Veränderung durch die Ausbreitung der Filialen und der folglich flächendeckenden Versorgung wirkte sich sowohl in städtischen als auch in ländlichen Regionen aus. Seitdem ist "die Bindung zwischen Wohnort und Nahrung [...]aufgehoben, die Ernährung ist nicht mehr von saisonalen Engpässen und Überschüssen abhängig.\footcite{Stierand2008StadtLebensmittel, S.122f}  
 
 \subsubsection {Ernährung in der Stadt}
 Heute erreichen Lebensmittel den Konsumenten zu 90\% in verarbeiteter Form. Vor allem der Anteil von „Convenience Produkten“, also Fertig- oder Halbfertigprodukten habe laut Hemmerling stark zugenommen. (Hemmerling et al., 2012, p. 33). „Die zeitaufwendigen Prozesse der Verarbeitung und Zubereitung wurden zunehmend in die Industrie transferiert.“  
-Die dauerhafte Eine bewusste Essensplanung bezüglich saisonaler Verfügbarkeit von Lebensmitteln wurde durch die beinahe ständige Verfügbarkeit durch den globalen Handel überflüssig.\footcite[Vgl.][S.20]{SchmidtDieVon}
+Die dauerhafte und bewusste Essensplanung bezüglich saisonaler Verfügbarkeit von Lebensmitteln wurde durch den globalen Handel und die folglich beinahe ständige Verfügbarkeit der Lebensmittel überflüssig.\footcite[Vgl.][S.20]{SchmidtDieVon}
 Laut Stierand wurde der Mensch erst durch das moderne Ernährungssystem zum ausschließlichen Verbraucher von Lebensmitteln. Er begründet dies mit der Aussage: "Wir sind Konsumenten. Wir essen nicht mehr selbstgezogene Lebensmittel, sondern wir verzehren Produkte, deren Herkunft, deren Produktion und Geschichte uns nur in Ausnahmefällen bekannt ist. Essen als Resultat einer arbeitsteiligen Nahrungskette […] wird uns fremd, zumindest aber fremder."\footcite{Spiekermann2000GesundeKulturwissenschaft} 
-"Die Mehrzahl der heutigen Konsumenten haben weder direkten Kontakt zu den ursprünglichen Erzeugern, noch haben sie einen Einblick in die Prozesse der Verarbeitung und Zubereitung.
+"Die Mehrzahl der heutigen Konsumenten habe weder direkten Kontakt zu den ursprünglichen Erzeugern, noch haben sie einen Einblick in die Prozesse der Verarbeitung und Zubereitung.
 Die Ernährung beginnt für die meisten im Warenregal von Supermärkten, Fachgeschäften oder Discountern" (BMEL, 2014).\footcite[S.20]{SchmidtDieVon}\footcite[Vgl.]{BerichtInhalt}
 
  Auf eine detailierte Beschreibung der Essgewohnheiten der städtischen Bewohner in der heutigen Zeit kann in diesem Rahmen nicht eingegangen werden. Im folgenden wird daher versucht die Hauptentwicklungen bezüglich der Nachfrage an Lebensmittel am Beispiel Deutschland aufzulisten. 
@@ -676,9 +775,8 @@ haben eine eigene Identität bekommen, bei ihnen denkt niemand mehr an die eigen
 D. Schmidt fasst die Veränderungen in der Lebensmittelversorgung wie folgt zusammen. Die Folgenden Punkte beziehen sich dabei auf städtische und ländliche Bewohner in Industrieländern. (Da sich (wie oben genannt) seit der Entstehung der Filialen die ländliche und städtische Versorgung einander angeglichen hat.)
 
 \begin{itemize}
-
-\item "Ernährung kann gesichert werden ohne selbst als Produzent tätig werden zu
-müssen.
+\item Die "Ernährung kann gesichert werden ohne selbst als Produzent tätig werden zu
+müssen.\footcite[S.20]{SchmidtDieVon}
 \item Arbeitsverhältnisse sind unabhängig von der häuslichen Versorgung.
 \item Saisonale oder regionale Verfügbarkeiten werden durch den globalen Handel
 ausgeglichen, so dass nahezu jederzeit alle Lebensmittel zur Verfügung stehen.
@@ -686,6 +784,8 @@ ausgeglichen, so dass nahezu jederzeit alle Lebensmittel zur Verfügung stehen.
 eine (warme) Mahlzeit.
 \item Die städtische Ernährung und die ländliche Ernährung unterscheiden sich nicht"\footcite[S.20]{SchmidtDieVon}
 \end{itemize}
+
+
 
 \subsubsection{Die Rolle des Konsumenten}
 
@@ -733,7 +833,7 @@ Grundsätzlich wird vertikale Landwirtschaft in drei Typen unterteilt:\\
 2. Rooftop Farming: Dies impliziert die Nutzung von Hochhausdächern oder die Integration von Anbau in bestehende Gebädestrukturen (z.B Restaurant oder Supermärkte), welches diesen eine zweite Funktion verleiht.\newline
 3. Kommerzieller, großflächiger Anbau über mehrere Etagen.
 
-\subssubsection{Hydroponik und Aeroponik}
+\subsubsection{Hydroponik und Aeroponik}
 Laut Möller haben diese beiden Technologien den Umgang mit der Ressource Wasser in der Landwirtschaft auf ein neues Level gebracht. Die Kombination beider Technologien in einem Kreisslaufsystem kann bis zu 95 \% des Wasserverbrauchs einsparen.
 
 \begin{figure}[htbp]
@@ -766,8 +866,6 @@ Das Konzept der Landwirtschaft innerhalb von Gebäuden ist eine gängige Methode
 
 Im londoner Stadtteil Clapham befindet sich die erste Untergrund-Farm der Stadt. Diese liegt 33 Meter unter London und wurde in einem Lufschutzbunker des zweiten Weltkriegs von den Gründern  Richard Ballard, Steven Dring und Michel Roux Jnr eingerichtet. Die Farm baut sogenanntes Mikrogemüse an welches nach nur wenigen Tagen abgeerntet wird. Die Anbaufläche beläuft sich dabei auf ca. 10000 Quadratmeter und die Farm produziert laut Angaben des Unternehmens ca. zwischen 5.000 und 20.000 Kilo Lebensmittel pro Jahr. Herangezogen werden die Planzen mit LED-Licht und für die Bewässerung sorgt ein hydroponisches Bewässerungssystem, welches laut dem Unternehmen ca. 70 Prozent weniger Wasser verbraucht als herkömmliche Anbauformen auf dem Land. Die Fläche des Schutzbunkers blieb bis zur Einrichtung der Farm ungenutzt weswegen keine weitere Fläche erschlossen werden musste. Pestizide und Klima spielen für diese Anbauform keine Rolle da ein eigenes Klima und Ökosystem innerhalb der Räume herrscht. Unterstützung erhält das Projekt durch die Universität Cambridge welche die Daten zur Feuchtigkeit, Temperatur und Wachstumsgeschwindigkeit wissenschaftlich auswertet.
 
-\subsubsection{Growing Underground in London}
-
 \subsection {Vor-, Nachteile, Möglichkeiten und Herausforderungen von VF im Überblick}
 \subsubsection{Vorteile von VF}
 
@@ -779,16 +877,14 @@ Ebenso ist die Gefahr bei vertikalen Farmen geringer, dass Bakterien im großen 
 „Vertical farming meets the needs of an increasing urbanization. Buildings used for farming can be placed anywhere while outdoor fields are static in location. By strategically placing vertical farms inside or in the near vicinity of urban centers and cities, we are able to meet the need for localization of food production. Foods can be harvested and sold in the same building immediately after harvest, eliminating the need for transportation and storage.”\footcite[S.7]{PeterMollerVoss2013VerticalRise}
 \end{displayquote}
 
-Aus diesem Zitat von Möller Voss sind weitere Vorteile von VF herauszulesen:
-
 \begin{itemize}
-    \item Ortsunabhängigkeit: VF eignet sich besonders um die Problemen der steigende Verstädterung zu mildern. VF Fabriken können ortsunabhängig gebaut werden, während  ländwirtschaftliche Flächen orts- und bodenqualitätsgebunden sind.
+\item Ortsunabhängigkeit, denn VF eignet sich besonders um die Problemen der steigende Verstädterung zu mildern. VF Fabriken können ortsunabhängig gebaut werden, während  ländwirtschaftliche Flächen orts- und bodenqualitätsgebunden sind.
     \item Lokalisierung der Lebensmittelproduktion, was Transport und unnötige Lagerung unnötig macht. In einem weiteren Schritt kann daran gedacht werden, nach Bedarf zu ernten, was unnötige Lagerung oder Lebensmittelabfall zusätzlich reduzieren könnte.
 \end{itemize}
 
 \subsubsection{Herausforderungen von VF}
 
-Sofern die Idee von VF darin besteht Nahrungsmittelproduktion zu lokalisieren, muss das VF dementsprechend zentral in der Stadt platziert. Eine der größten Herausforderungen, die sich hierbei für die Planer von VF - Projekten ergibt, ist die Verfügbarkeit von erschwinglichem Bauplatz in der Stadt. So scheitern laut Möller viele der Projekte vor dem Start aufgrund von fehlenden finanziellen Mitteln.\footcite[S.8]{PeterMollerVoss2013VerticalRise}
+Sofern die Idee von VF darin besteht Nahrungsmittelproduktion zu lokalisieren, muss das VF dementsprechend zentral in der Stadt platziert sein. Eine der größten Herausforderungen, die sich hierbei für die Planer von VF - Projekten ergibt, ist die Verfügbarkeit von erschwinglichem Bauplatz in der Stadt. So scheitern laut Möller viele der Projekte vor dem Start aufgrund von fehlenden finanziellen Mitteln.\footcite[S.8]{PeterMollerVoss2013VerticalRise}
 
 Häufig ist die Akzeptanz für Indoor Vertikal Farming bei den Stadtbewohnern noch nicht vorhanden, da diese nicht mehr an die Landwirtschaft erinnert, die sie zuvor kannten.
 
@@ -803,9 +899,13 @@ Häufig ist die Akzeptanz für Indoor Vertikal Farming bei den Stadtbewohnern no
 Im Vergleich zu traditionellen und landbasierten Anbaumethoden, die für Traktoren, Pflüge etc. fossile auf fossile Energien angewiesen sind. Als Beispiel: In Nordamerika wird 20\% der fossilen Energie von der Landwirtschaft verbraucht.\footcite[Vgl.][S.27]{Al-Kodmany2018TheCity[82,83}, kann VF den Bedarf an fossilen Rohstoffen senken.
 Hinsichtlich des Transports schneidet VF im Vergleich zu traditioneller Landwirtschaft ebenso besser ab. Die Distanz zwischen Herstellung und Konsum wird in den meisten Fällen wesentlich kleiner. Als Orientierung: Lebensmittel aus traditionellem Anbau legen im Durchschnitt 15500 Meilen (ungefähr 2400 Km) zurück.
 
-\subsubsection{Bedingungen}
-VF erfüllt die Kriterien der Nachhaltigkeit unter folgenden Bedingungen:
-Für den Anbau und die Produktion muss regenerative Energie genutzt werden. Erst so kann die Ressourceneffizienz der Lebensmittel im Vergleich zu Nahrung aus konventionellem Anbau reduziert werden. 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=14cm]{image_folder/automatisation_kondo.png}
+\caption{Eine Ernte-Roboter bei der Arbeit}
+\label{fig:Automatisierung}
+\end{figure}
 
 \subsubsection{VF unter der Lupe der Nachhaltigkeitskriterien}
 
@@ -815,43 +915,49 @@ Möller Voss bezieht sich in seiner Examensarbeit auf die Aussage Despommiers.\f
 Kreislaufsystem\\
 Biomasse die bereits zur Wiederaufbereitung von Wasser verwendet wurde, sowie weitere Pflanzenabfälle können als Biokraftstoff zur eigenbetreibung und Betreibung weiterer Farmen verwendet werden.\footcites[Vgl.][S.80ff]{Despommier2009TheFarms}\\
 
+\subsubsection{Bedingungen}
+VF erfüllt die Kriterien der Nachhaltigkeit unter folgenden Bedingungen:
+Für den Anbau und die Produktion muss regenerative Energie genutzt werden. Erst so kann die Ressourceneffizienz der Lebensmittel im Vergleich zu Nahrung aus konventionellem Anbau reduziert werden. 
 
 
+\subsubsection{Aquaponik}
 
-
-\subsubsection{Aquaponik und Hydroponik}
-
-Das Beispielprojekt Urban Farmers in der Schweiz kombiniert hydroponischen Gemüseanbau mit der Zucht von Aquakulturen. Erste Versuche dier Art des Anbaus entstanden laut Tobias Spring bereits in den 80er Jahren an der North Carolina State University.\footcite{Diver2006Aquaponics-IntegrationAquaculture} „Schon damals wurde festgestellt, dass auf diese Weise Wasserressourcen geschont werden können (die Fischzucht benötigte durch das Kreislaufsystem nur 1\% der Wassermenge konventioneller, teichbasierter Zucht) und die Systeme sich deshalb auch für aride Gebiete eignen würden." Ebenso sollen die Kosten geringer im Vergleich zu jeweils separater Produktion von Gemüse und Fisch gewesen sein. Spring zitiert hierbei die Steve Diver. Laut Experimenten, die an der University of Virgin Islands gemacht wurden „soll der Gemüseertrag aus aquaponischen Systemen um ein vielfaches höher ausfallen können, als aus feldbasiertem Anbau\footcite{Diver2006Aquaponics-IntegrationAquaculture}. ”\footcite[S.27]{TobiasSpringDerBasel-Stadt} --> Zitat im Zitat :SS
-
+Der Begriff Aquaponik ist ein Kreislaufsystem, das Spring zufolge Aquakultur(Fischzucht) mit Hydroponik vereint \footcite[Vgl.][S.44f]{TobiasSpringDerBasel-Stadt}. Hydroponik bezeichnet eine Anbaumethode, die anstelle von Erde Substrate wie zum Beispiel Bimsstein zum Pflanzenanbau verwendet. Durch die Fäkalien der Fische werden Pflanzen gedüngt. Diese wiederum reinigen das Wasser, was zu den Fischen geleitet wird (Siehe Abbildung \ref{fig:aquaponik}). \\
 \\
-Gleichzeitig gibt es eine Reihe an Herausforderungen im Bereich der Aqua- und Hydroponik.
-Wegen des bestehenden Kreisslaufssystems sei der Einsatz von Pestiziden verboten.\footcite[]{FreiMatthiasHartmann2007AquaponikGemuse.}  So bestehe laut Spring eine hohe Anfälligkeit für Schädlinge, da in häufigen Fällen Monokulturen eingesetzt werden. \footcite[S.27]{TobiasSpringDerBasel-Stadt}
+Ein Beispiel dazu sind die Aquaponik-Systeme des schweizer Unternehmens „Urban Famers“, die diese Systeme auf Flachdächern installiere.\footcites[Vgl.][S.26f]{TobiasSpringDerBasel-Stadt} Erste Versuche dieser Art des Anbaus entstanden laut Diver bereits in den achtziger Jahren an der North Carolina State University.\footcite[Vgl.][S.4]{Diver2006Aquaponics-IntegrationAquaculture} 
+Ihm zufolge habe dieses System viele Vorteile. Zum einen stellt Diver fest, dass Wasserresourcen geschont werden. Für die Fischzucht war in diesem Fall nur 1 \% der Wassermenge konventioneller Zucht erforderlich. Daher eigne sich das System besonders für klimatisch trockene Gebiete. Auch die Kosten würden geringer ausfallen. Laut Experimenten an der University of Virgin Islands konnte von den aquaponischen Systemen ein vielfaches mehr an Gemüse geerntet werden als bei feldbasiertem Anbau.\footcite[Vgl.][S.7f]{Diver2006Aquaponics-IntegrationAquaculture}  \\
+\\Gleichzeitig gibt es eine Reihe an Herausforderungen im Bereich der Aqua- und Hydroponik. Wegen des bestehenden Kreislaufssystems sei der Einsatz von Pestiziden Frei et. al. nach verboten.\footcite[S.43]{FreiMatthiasHartmann2007AquaponikGemuse.}  So bestehe laut Spring eine hohe Anfälligkeit für Schädlinge, da in häufigen Fällen Monokulturen eingesetzt werden. \footcite[S.27]{TobiasSpringDerBasel-Stadt}
 
-Für eine Bewertung hinsichtlich der Nachhaltigkeit soll ebenso eine langfristige Betreibung gewährleitet sein. Hierbei werden die Kosten zur Finanzierung des Projekts auf etwa 250m2 (Treibhaus, Fisch- becken, Technik) auf etwa 1 Million Schweizer Franken geschätzt.
+Für eine Bewertung hinsichtlich der Nachhaltigkeit soll seiner Meinung nach ebenso eine langfristige Betreibung gewährleitet sein. Hierbei werden die Kosten zur Finanzierung des Projekts bei etwa 250 Quadratmeter auf etwa eine Million Schweizer Franken (ca. 874.432 Euro) geschätzt. Die Flächennutzung sei in etwa garantiert: „Der Eigentümer der Flachdachfläche ist zumindest substantiell an den Anschaffungskosten beteiligt, trägt aber optimalerweise das Projekt selbst, wodurch er ein persönliches Interesse an dessen Langfristigkeit hat.“\footcite[Vgl.][S.37]{TobiasSpringDerBasel-Stadt} Desweiteren weist Spring in seiner Arbeit auf den Aufbau auf Flachdächern hin, der eine effiziente Form der Mehrfachnutzung des Gebäudes ermöglicht. Er stellt die Behauptung auf, dass erst durch die Kombination der Produktion mit Fischzucht eine landwirtschaftliche Produktivität überhaupt erst erzeugt werde.\footcite[S.47]{TobiasSpringDerBasel-Stadt} 
 
-Die Flächennutzung sei in etwa garantiert: “Der Eigentümer der Flachdachfläche ist zumindest substantiell an den Anschaffungskosten beteiligt, trägt aber optimalerweise das Projekt selbst, wodurch er ein persönliches Interesse an dessen Langfristigkeit hat.” (\footcite[Vgl.][S.37]{TobiasSpringDerBasel-Stadt})
-
-\\
-Hinsichtlich der Nachhaltigkeit dieses Projekts weist Spring in seiner Arbeit auf den Aufbau des Urban Farmers Projekt auf Flachdächern hin, der eine effiziente Form der Mehrfachnutzung ermöglicht. Er stellt die Behauptung auf, dass erst durch die Kombination der Produktion mit Fischzucht" eine Urban Farm landwirtschaftliche Produktivität […] überhaupt erst erzeugt werde.\footcite[S.47]{TobiasSpringDerBasel-Stadt} 
-
-
+\begin{figure}[htbp]
+\centering
+\caption{Aquaponiksystem mit Welsen}
+\includegraphics[width=12cm]{image_folder/Aquaponics_with_catfish.jpg}
+\Bildquelle{Somma, Ryan; Aquaponics with catfish; 2008;}
+\label{fig:aquaponik}
+\end{figure}
 
 \subsection{Positive und negative Auswirkungen von UL im Überblick}
      \subsubsection{Mögliche positive ökologische Auswirkungen von UL auf Städte}  
-     
-\begin{itemize}
-     \item günstige Auswirkungen auf das Mikroklima über die Beeinflussung von Feuchtigkeit, Temperatur oder CO2-Aufnahme.
-     \item  Reduzierung von Transport, Kühlung und Verpackung von Lebensmitteln
-     \item Reduzierung des Bedarfs externen Rohstoffe und Minimierung der Nichtnutzung von Restprodukten.
-     \item Entsiegelung von Flächen kann Verbesserung im urbanen Wassermanagement erreichen, was eine positive Auswirkung auf die Grundwasserneubildung hat. Das Kanalsystem kann somit häufig entlastet werden.  
-     \item positiver Beitrag zur Stadtbiodiversität und Landschafts‐ gestaltung(SMIT, NASR \& RATTA 2001)" (Quelle: Urbane Landwirtschaft und Green Production als Teil eines nachhaltigen Landmanagements)
-     \item "Kurze, innovative Nahrungsverteilungswege zwischen Erzeugern und Verbrauchern, Transporteinsparungen, frische Produkte, Integration der „Landwirte“ in Marketingprozesse sowie bessere Absprache zwischen Angebot und Nachfrage sind potenzielle Vorzüge gegenüber einer globalisierten Landwirtschaft."
-     \item Milderung des Urban-Heat-Effects: Durch einen vermehrten Pflanzenbewuchs an und um innerstädtische Gebäude, kann der positive Nebeneffekt entstehen, dass sich diese im Sommer weniger aufheizen, die Luftqualität verbessert und Energiekosten für eventuelle Klimatisierung eingespart werden können.\footcite{Schulz2013UrbaneLandmanagements},\footcite[Vgl.][S.16]{TobiasSpringDerBasel-Stadt}
-     \item Verbesserung der Luftqualität
-     \item  Kreisslauf-Effekt: Möglichkeit der Nutzung von städtischen Ressourcen wie Abwärme oder Abwässer
-\end{itemize}
 
-\subsubsection{Regionalität ein weiterer Vorteil von UL}
+
+Sofern Landwirtschaft im urbanen Raum und außerhalb (d.h nicht in Fabriken oder abgeschlossenen Räumen) betrieben wird, wirkt sich dies über die Beeinflussung der Temperatur, Luftfeuchtigkeit und CO2-Aufnahme positiv auf das Mikroklima und die Biodiversität der Stadt aus.
+Gleicheitig entsteht durch einen vermehrten Pflanzenbewuchs in der Stadt (vor allem bei Bewuchs um Gebäude) eine Milderung des sogenannten Urban -Heat-Effects. Die Gebäude heizen sich im Sommer also weniger auf, was sich wiederum positiv auf die Luftqualität auswirkt und Energiekosten für eventuelle Klimatisierung eingespart werden kann.\footcite{Schulz2013UrbaneLandmanagements},\footcite[Vgl.][S.16]{TobiasSpringDerBasel-Stadt}
+\\
+\\
+Urbaner Anbau von Lebensmittel und folglich kurze Entfernungen zum Verbraucher, bieten neue Möglichkeiten zur Reduzierung von Transportwegen, Kühlung und Verpackung von Lebensmitteln. Der Bedarf an fossilen Rohstoffen kann auf diese Weise sinken, was sich positiv auf die Bewertung des ökologischen Fußabdrucks der Lebensmitteln auswirkt. Schulz fasst viele wichtige Punkte zusammen: "Kurze, innovative Nahrungsverteilungswege zwischen Erzeugern und Verbrauchern, Transporteinsparungen, frische Produkte, Integration der „Landwirte“ in Marketingprozesse sowie bessere Absprache zwischen Angebot und Nachfrage sind potenzielle Vorzüge gegenüber einer globalisierten Landwirtschaft."\footcite[S.10]{Schulz2013UrbaneLandmanagements} Die starke lokale Nähe zwischen Produktion und Verbrauch lässt ebenso Platz für zukünftige Pläne eines Anbaus je Bedarf. Auf diese Weise könnte unnötiger Lebensmittelabfall verhindert werden. Die Integration in die Stadt ermöglicht auch eine Nutzung der städtischen Ressourcen wie Abwärme oder Abwässer, Es entsteht ein Kreislauf-Effekt der ebenso zur Reduzierung des Bedarfs externen Rohstoffe beiträgt.
+Sofern für die Zwecke der urbanen Landwirtschaft innerstädtische Flächen entsiegelt werden, kann eine Verbesserung im urbanen Wassermanagement erreicht werden. Dies kann eine positive Auswirkung auf die Grundwasserneubildung haben und da Kanalsystem kann somit entlastet werden.  
+  
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=14cm]{image_folder/moeglicheVorteileUL.png}
+\caption{Mögliche Vorteile von UL für Städte}
+\label{fig:MoeglicheVorteilevonUL}
+\end{figure}
+
+\subsubsection{Regionalität als Vorteil von UL}
 
 Im Vergleich zu konventionellem Anbau sind die Produktionskosten bei VF unabhängig vom Ölpreis (Siehe {Vergangenheit der Urbanen Landwirtschaft} am Beispiel Kuba), was einen deutlichen ökonomischen Vorteil ausmacht.
 Ebenso entstehe laut Sharanbir et al durch den Transport\footcite[Vgl.][]{GrewalCanFood}, die Lagerung und Produktion (d.h. Pflügen, Säen, etc.) hoher fossiler Verbrauch.\footcite[]{2012TheEssay} (ökol Dim) 
@@ -868,7 +974,18 @@ Ein weiterer Vorteil des regionalen Anbaus ist die kurze Distanz zwischen Produk
  \end{itemize}
 \section{Prognose zur urbanen Landwirtschaft}
 \subsection{Heutige und zukünftige globale Landnutzung}
-Das Umdenken der allgemeinen Gesellschaft fandt dennoch erst zunehmend nach dem ersten Weltkrieg statt. Zuvor 
+
+Um herauszufinden wie wichtig die Entwicklung von urbaner Landwirtschaft tatsächlich ist, ist es zunächst bedeutend Landwirtschaftsformen auf deren Grundlage zu untersuchen. Die Entwicklung der globalen Landnutzung ist insofern entscheidend, dass die Landressourcen für eine Versorgung durch Lebensmittel entscheidend sind. Die Versorgung und deren Sicherstellung hängen wiederum stark von der Weltbevölkerung ab. Das Bundesministerium für Umwelt, Naturschutz und nukleare Sicherheit, der Industrieverband Agrar e. V. (IVA) und die Food and Agriculture Organization of the United Nations (FAO) geben an, dass die Weltbevölkerung bis zum Jahr 2050 auf über neun Milliarden Menschen ansteigt. Laut dem Bundesministerium für Umwelt bereite die Lebensmittelproduktion aber bereits jetzt enorme Umweltprobleme. Zudem würden bereits jetzt ca. 800 Millionen Menschen an Hunger leiden. Der IVA prognostizierte eine pro Kopf Anbaufläche von 1700 Quadratmetern im Jahre 2050. 2010 waren es laut dem IVA noch ca. 2100 Quadratmeter pro Person.
+
+Die FAO geht zudem davon aus, dass fast der gesamte Bevölkerungszuwachs in den Entwicklungsländern stattfinden wird. Die Urbanisierung würde sich fortsetzen und beschleunigen und etwa 70 Prozent der Weltbevölkerung würden städtisch sein. Um diese größere, städtischere und reichere Bevölkerung zu ernähren, müsse die Nahrungsmittelproduktion um 70 Prozent steigen. Die jährliche Getreideerzeugung müsse auf rund 3 Milliarden Tonnen (2,1 Milliarden Tonnen, Stand: 2017)  steigen, und die jährliche Fleischproduktion müsse um über 200 Millionen Tonnen auf 470 Millionen Tonnen steigen.
+
+Wie viel Fläche verbraucht der "Fleischanbau"?
+Wie viel Fläche verbraucth der "Getreideanbau"?
+
+Wie viel Fläche braucht der Mensch unbedingt?
+    Projekt 2000qm
+
+
 \subsection{Zusammenfassung}
 \section{Fazit}
 
@@ -879,7 +996,7 @@ Das Umdenken der allgemeinen Gesellschaft fandt dennoch erst zunehmend nach dem 
 
 \begingroup
 \singlespacing
-\setlength\bibitemsep{10pt}\% oder was auch immer
+\setlength\bibitemsep{10pt} % oder was auch immer
 \printbibliography
 \endgroup
 
